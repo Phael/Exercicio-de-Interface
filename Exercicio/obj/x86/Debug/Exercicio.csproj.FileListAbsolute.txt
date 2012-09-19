@@ -1,0 +1,30 @@
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\bin\Debug\Exercicio.exe
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\bin\Debug\Exercicio.pdb
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Properties.Resources.resources
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\Exercicio.exe
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\Exercicio.pdb
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Form_Principal.resources
+d:\meus documentos\visual studio 2010\Projects\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Filtrar.resources
+E:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.exe
+E:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.pdb
+E:\Exercicio\Exercicio\bin\Debug\Exercicio.exe
+E:\Exercicio\Exercicio\bin\Debug\Exercicio.pdb
+E:\Exercicio\Exercicio\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Filtrar.resources
+E:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Form_Principal.resources
+E:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Properties.Resources.resources
+E:\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\Exercicio.exe
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\Exercicio.pdb
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Filtrar.resources
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Form_Principal.resources
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Properties.Resources.resources
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\bin\Debug\Exercicio.exe
+C:\Users\IFSP\Desktop\Exercicio\Exercicio\bin\Debug\Exercicio.pdb
