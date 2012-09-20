@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace Exercicio
 {
-    class Filme 
+    class Filmes 
     {
         public string NOME_FILME;
         public string GENERO;

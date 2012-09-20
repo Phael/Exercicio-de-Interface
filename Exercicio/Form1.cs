@@ -32,27 +32,11 @@ namespace Exercicio
         }
 
         //Metodo para a criaçao do roll de filmes
-        public void Adicionar_Roll()
-        {
-            ListViewItem LISTA = new ListViewItem();
-            
-            if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty) && (textBox_Local.Text != string.Empty))
-            {
-                //Adiciona valores no lisView_roll
-                LISTA.Text = textBox_Nome.Text;
-                LISTA.SubItems.Add(comboBox_Genero.Text);
-                LISTA.SubItems.Add(textBox_Local.Text);
-                LISTA.SubItems.Add(dateTimePicker_Data.Value.ToString());
-                listView_roll.Items.Add(LISTA); 
-                Limpar();
-            }
-            else
-            {
-                MessageBox.Show("Preencha todos os Campos", "Campos Nao Preenchidos", MessageBoxButtons.OK);
-            }
+        //public string Adicionar_Roll()
+        //{
             
         
-        }        
+        //}        
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
 
@@ -77,29 +61,42 @@ namespace Exercicio
 
         public void button_Adicionar_Click(object sender, EventArgs e)
         {
-            Filme Filmes = new Filme();
+            Filmes Filme = new Filmes();
+            Dictionary<string, List<Filmes>> DICIONARIO = new Dictionary<string, List<Filmes>>();
+            List<Filmes> LISTA = new List<Filmes>();
+            ListViewItem LIST = new ListViewItem();
 
-            Dictionary<string, List<Filme>> DICIONARIO = new Dictionary<string, List<Filme>>();
-  
-            List<Filme> LISTA = new List<Filme>();
-
-            Filmes.NOME_FILME = textBox_Nome.Text;
-            Filmes.GENERO = comboBox_Genero.Text;
-            Filmes.LOCAL = textBox_Local.Text;
-            Filmes.DATA = dateTimePicker_Data.Value.ToString();
-
-            LISTA.Add(Filmes);
-            DICIONARIO.Add("Rafael", LISTA);
-
-            foreach (KeyValuePair<string, List<Filme>> J in DICIONARIO)
+            if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty) && (textBox_Local.Text != string.Empty))
             {
-                foreach (Filme JJ in J.Value)
-                {
-                    MessageBox.Show("" + Filmes.NOME_FILME + Filmes.LOCAL + Filmes.DATA + Filmes.GENERO, "" + J.Key, MessageBoxButtons.OK);
-                }
+                //Adiciona o FIlme a Lista e ao Dicionario
+                Filme.NOME_FILME = textBox_Nome.Text;
+                Filme.GENERO = comboBox_Genero.Text;
+                Filme.LOCAL = textBox_Local.Text;
+                Filme.DATA = dateTimePicker_Data.Value.ToString();
+                LISTA.Add(Filme);
+                DICIONARIO.Add("Rafael", LISTA);
+
+                //Adiciona valores no lisView_roll
+                LIST.Text = Filme.NOME_FILME;
+                LIST.SubItems.Add(Filme.GENERO);
+                LIST.SubItems.Add(Filme.LOCAL);
+                LIST.SubItems.Add(Filme.DATA);
+                listView_roll.Items.Add(LIST);
+                Limpar();
             }
-           
-            Adicionar_Roll();
+            else
+            {
+                MessageBox.Show("Preencha todos os Campos", "Campos Nao Preenchidos", MessageBoxButtons.OK);
+            }
+
+            //foreach (KeyValuePair<string, List<Filmes>> J in DICIONARIO)
+            //{
+            //    foreach (Filmes JJ in J.Value)
+            //    {
+            //        MessageBox.Show("" + Filme.NOME_FILME + Filme.LOCAL + Filme.DATA + Filme.GENERO, "" + J.Key, MessageBoxButtons.OK);
+            //    }
+            //}
+            
         
         }
 

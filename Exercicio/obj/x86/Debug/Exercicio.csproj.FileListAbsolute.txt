@@ -28,3 +28,13 @@ C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.
 C:\Users\IFSP\Desktop\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
 C:\Users\IFSP\Desktop\Exercicio\Exercicio\bin\Debug\Exercicio.exe
 C:\Users\IFSP\Desktop\Exercicio\Exercicio\bin\Debug\Exercicio.pdb
+F:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.exe
+F:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.pdb
+F:\Exercicio\Exercicio\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Filtrar.resources
+F:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Form_Principal.resources
+F:\Exercicio\Exercicio\obj\x86\Debug\Exercicio.Properties.Resources.resources
+F:\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\Exercicio\Exercicio\bin\Debug\Exercicio.exe
+F:\Exercicio\Exercicio\bin\Debug\Exercicio.pdb
