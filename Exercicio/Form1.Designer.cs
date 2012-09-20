@@ -28,6 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Romance", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup4 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup5 = new System.Windows.Forms.ListViewGroup("Ficção Ciêntifica", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup6 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox_Genero = new System.Windows.Forms.ComboBox();
             this.textBox_Local = new System.Windows.Forms.TextBox();
@@ -37,6 +46,7 @@
             this.groupBox_Genero = new System.Windows.Forms.GroupBox();
             this.groupBox_Local = new System.Windows.Forms.GroupBox();
             this.groupBox_Data = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_Data = new System.Windows.Forms.DateTimePicker();
             this.button_Filtrar = new System.Windows.Forms.Button();
             this.listView_roll = new System.Windows.Forms.ListView();
             this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -44,7 +54,6 @@
             this.Local = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.textBox_apresenta = new System.Windows.Forms.TextBox();
-            this.dateTimePicker_Data = new System.Windows.Forms.DateTimePicker();
             this.groupBox_Data.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -140,6 +149,14 @@
             this.groupBox_Data.TabStop = false;
             this.groupBox_Data.Text = "Data";
             // 
+            // dateTimePicker_Data
+            // 
+            this.dateTimePicker_Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Data.Location = new System.Drawing.Point(16, 17);
+            this.dateTimePicker_Data.Name = "dateTimePicker_Data";
+            this.dateTimePicker_Data.Size = new System.Drawing.Size(228, 20);
+            this.dateTimePicker_Data.TabIndex = 18;
+            // 
             // button_Filtrar
             // 
             this.button_Filtrar.Location = new System.Drawing.Point(173, 232);
@@ -156,6 +173,34 @@
             this.Genero,
             this.Local,
             this.Data});
+            listViewGroup1.Header = "Ação";
+            listViewGroup1.Name = "Ação";
+            listViewGroup2.Header = "Romance";
+            listViewGroup2.Name = "Romance";
+            listViewGroup3.Header = "Aventura";
+            listViewGroup3.Name = "Aventura";
+            listViewGroup4.Header = "Infantil";
+            listViewGroup4.Name = "Infantil";
+            listViewGroup5.Header = "Ficção Ciêntifica";
+            listViewGroup5.Name = "Ficção Ciêntifica";
+            listViewGroup6.Header = "Documentário";
+            listViewGroup6.Name = "Documentário";
+            listViewGroup7.Header = "Suspense";
+            listViewGroup7.Name = "Suspense";
+            listViewGroup8.Header = "Terror";
+            listViewGroup8.Name = "Terror";
+            listViewGroup9.Header = "Comédia";
+            listViewGroup9.Name = "Comédia";
+            this.listView_roll.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
             this.listView_roll.Location = new System.Drawing.Point(6, 274);
             this.listView_roll.Name = "listView_roll";
             this.listView_roll.Size = new System.Drawing.Size(730, 197);
@@ -190,14 +235,6 @@
             this.textBox_apresenta.Name = "textBox_apresenta";
             this.textBox_apresenta.Size = new System.Drawing.Size(395, 139);
             this.textBox_apresenta.TabIndex = 17;
-            // 
-            // dateTimePicker_Data
-            // 
-            this.dateTimePicker_Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Data.Location = new System.Drawing.Point(16, 17);
-            this.dateTimePicker_Data.Name = "dateTimePicker_Data";
-            this.dateTimePicker_Data.Size = new System.Drawing.Size(228, 20);
-            this.dateTimePicker_Data.TabIndex = 18;
             // 
             // Form_Principal
             // 
