@@ -41,33 +41,24 @@ namespace Exercicio
 
             if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty) && (textBox_Local.Text != string.Empty))
             {
-                    //Adiciona o FIlme a Lista e ao Dicionario
-                    
+                   
+                //Adiciona o FIlme a Lista e ao Dicionario
+                Filme.NOME_FILME = textBox_Nome.Text;
+                Filme.GENERO = comboBox_Genero.Text;
+                Filme.LOCAL = textBox_Local.Text;
+                Filme.DATA = dateTimePicker_Data.Value.ToShortDateString();
+                LISTA_FILMES.Add(Filme);
 
-                 if(DICIONARIO.ContainsKey(comboBox_Genero.Text))
-                 {
-                     List<Filmes> FILMESREF = DICIONARIO[comboBox_Genero.Text];
+                //Verifica se existe a chave, e adiciona os valores no dicionario
+                if(DICIONARIO.ContainsKey(dateTimePicker_Data.Value.ToShortDateString()))
+                {
+                     List<Filmes> FILMESREF = DICIONARIO[dateTimePicker_Data.Value.ToShortDateString()];
                      LISTA.Add(Filme);
 
-                     Filme.NOME_FILME = textBox_Nome.Text;
-                     Filme.GENERO = comboBox_Genero.Text;
-                     Filme.LOCAL = textBox_Local.Text;
-                     Filme.DATA = dateTimePicker_Data.Value.ToShortDateString();
-                     LISTA_FILMES.Add(Filme);
-
-                     DICIONARIO.Add(comboBox_Genero.Text, LISTA_FILMES);
                  }
                  else
                  {
-                    List<Filmes> LISTAREFERENCIA = new List<Filmes>();
-
-                    Filme.NOME_FILME = textBox_Nome.Text;
-                    Filme.GENERO = comboBox_Genero.Text;
-                    Filme.LOCAL = textBox_Local.Text;
-                    Filme.DATA = dateTimePicker_Data.Value.ToShortDateString();
-                    LISTA_FILMES.Add(Filme);
-
-                    DICIONARIO.Add(comboBox_Genero.Text, LISTA_FILMES);
+                     DICIONARIO.Add(dateTimePicker_Data.Value.ToShortDateString(), LISTA_FILMES);
                  }
                  
                     //Adiciona valores no lisView_roll
@@ -78,14 +69,22 @@ namespace Exercicio
                     LISTA_VIEW.Group = listView_roll.Groups[comboBox_Genero.Text];
                     listView_roll.Items.Add(LISTA_VIEW);
 
-                    
-               
-                //Limpar();
+                    Limpar();
             }
             else
             {
                 MessageBox.Show("Preencha todos os Campos", "Campos Nao Preenchidos", MessageBoxButtons.OK);
             }
+
+            
+
+            //foreach (KeyValuePair<string, List<Filmes>> J in DICIONARIO)
+            //{
+            //    foreach (Filmes JJ in J.Value)
+            //    {
+            //        MessageBox.Show("" + Filme.NOME_FILME + Filme.LOCAL + Filme.DATA + Filme.GENERO, "" + J.Key, MessageBoxButtons.OK);
+            //    }
+            //}
         }
         private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
@@ -105,20 +104,11 @@ namespace Exercicio
         public void Form1_Load(object sender, EventArgs e)
         {
             comboBox_Genero.DataSource = listView_roll.Groups;
+            comboBox_Genero.Text = string.Empty;
         }
-
-        public void button_Adicionar_Click(object sender, EventArgs e)
+        private void button_Adicionar_Click(object sender, EventArgs e)
         {
             Adicionar();
-            //foreach (KeyValuePair<string, List<Filmes>> J in DICIONARIO)
-            //{
-            //    foreach (Filmes JJ in J.Value)
-            //    {
-            //        MessageBox.Show("" + Filme.NOME_FILME + Filme.LOCAL + Filme.DATA + Filme.GENERO, "" + J.Key, MessageBoxButtons.OK);
-            //    }
-            //}
-            
-        
         }
 
     }
