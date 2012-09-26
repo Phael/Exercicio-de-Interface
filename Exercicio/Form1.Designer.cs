@@ -65,27 +65,27 @@
             this.groupBox_Local = new System.Windows.Forms.GroupBox();
             this.textBox_Local = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker_Filtrar_datainicial = new System.Windows.Forms.DateTimePicker();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.comboBox_Filtrar_Genero = new System.Windows.Forms.ComboBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox_Filtrar_Nome = new System.Windows.Forms.TextBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
-            this.checkBox_ = new System.Windows.Forms.CheckBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker_Filtrar_datafilnal = new System.Windows.Forms.DateTimePicker();
+            this.button_Filtrar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listView_Filtrar = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button_Filtrar = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_Filtrar_datafilnal = new System.Windows.Forms.DateTimePicker();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.dateTimePicker_Filtrar_datainicial = new System.Windows.Forms.DateTimePicker();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.comboBox_Filtrar_Genero = new System.Windows.Forms.ComboBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox_Filtrar_Nome = new System.Windows.Forms.TextBox();
+            this.checkBox_ = new System.Windows.Forms.CheckBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox_Data.SuspendLayout();
@@ -94,12 +94,12 @@
             this.groupBox_Nome.SuspendLayout();
             this.groupBox_Local.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -154,7 +154,7 @@
             this.groupBox_Genero.Controls.Add(this.comboBox_Genero);
             this.groupBox_Genero.Location = new System.Drawing.Point(25, 79);
             this.groupBox_Genero.Name = "groupBox_Genero";
-            this.groupBox_Genero.Size = new System.Drawing.Size(177, 52);
+            this.groupBox_Genero.Size = new System.Drawing.Size(170, 52);
             this.groupBox_Genero.TabIndex = 48;
             this.groupBox_Genero.TabStop = false;
             this.groupBox_Genero.Text = "Genero";
@@ -164,7 +164,7 @@
             this.comboBox_Genero.FormattingEnabled = true;
             this.comboBox_Genero.Location = new System.Drawing.Point(8, 20);
             this.comboBox_Genero.Name = "comboBox_Genero";
-            this.comboBox_Genero.Size = new System.Drawing.Size(155, 21);
+            this.comboBox_Genero.Size = new System.Drawing.Size(149, 21);
             this.comboBox_Genero.TabIndex = 19;
             // 
             // groupBox1
@@ -271,6 +271,7 @@
             // 
             // button_Editar
             // 
+            this.button_Editar.Enabled = false;
             this.button_Editar.Location = new System.Drawing.Point(107, 200);
             this.button_Editar.Name = "button_Editar";
             this.button_Editar.Size = new System.Drawing.Size(75, 23);
@@ -315,141 +316,14 @@
             this.tabPage2.Text = "FILTRAR";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // groupBox2
+            // button_Filtrar
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.checkBox4);
-            this.groupBox2.Controls.Add(this.dateTimePicker_Filtrar_datainicial);
-            this.groupBox2.Location = new System.Drawing.Point(501, 26);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(248, 46);
-            this.groupBox2.TabIndex = 53;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Data Inicial";
-            // 
-            // dateTimePicker_Filtrar_datainicial
-            // 
-            this.dateTimePicker_Filtrar_datainicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Filtrar_datainicial.Location = new System.Drawing.Point(10, 17);
-            this.dateTimePicker_Filtrar_datainicial.Name = "dateTimePicker_Filtrar_datainicial";
-            this.dateTimePicker_Filtrar_datainicial.Size = new System.Drawing.Size(197, 20);
-            this.dateTimePicker_Filtrar_datainicial.TabIndex = 18;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.checkBox2);
-            this.groupBox3.Controls.Add(this.comboBox_Filtrar_Genero);
-            this.groupBox3.Location = new System.Drawing.Point(24, 78);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(196, 52);
-            this.groupBox3.TabIndex = 52;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Genero";
-            // 
-            // comboBox_Filtrar_Genero
-            // 
-            this.comboBox_Filtrar_Genero.FormattingEnabled = true;
-            this.comboBox_Filtrar_Genero.Location = new System.Drawing.Point(8, 20);
-            this.comboBox_Filtrar_Genero.Name = "comboBox_Filtrar_Genero";
-            this.comboBox_Filtrar_Genero.Size = new System.Drawing.Size(155, 21);
-            this.comboBox_Filtrar_Genero.TabIndex = 19;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox4.Controls.Add(this.textBox_Filtrar_Nome);
-            this.groupBox4.Controls.Add(this.checkBox_);
-            this.groupBox4.Location = new System.Drawing.Point(23, 26);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(436, 46);
-            this.groupBox4.TabIndex = 51;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Nome";
-            // 
-            // textBox_Filtrar_Nome
-            // 
-            this.textBox_Filtrar_Nome.Location = new System.Drawing.Point(8, 17);
-            this.textBox_Filtrar_Nome.Multiline = true;
-            this.textBox_Filtrar_Nome.Name = "textBox_Filtrar_Nome";
-            this.textBox_Filtrar_Nome.Size = new System.Drawing.Size(389, 20);
-            this.textBox_Filtrar_Nome.TabIndex = 7;
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.checkBox3);
-            this.groupBox5.Controls.Add(this.textBox_Filtrar_Local);
-            this.groupBox5.Location = new System.Drawing.Point(24, 137);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(435, 46);
-            this.groupBox5.TabIndex = 54;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Local";
-            // 
-            // textBox_Filtrar_Local
-            // 
-            this.textBox_Filtrar_Local.Location = new System.Drawing.Point(9, 17);
-            this.textBox_Filtrar_Local.Multiline = true;
-            this.textBox_Filtrar_Local.Name = "textBox_Filtrar_Local";
-            this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
-            this.textBox_Filtrar_Local.TabIndex = 20;
-            // 
-            // checkBox_
-            // 
-            this.checkBox_.AutoSize = true;
-            this.checkBox_.Location = new System.Drawing.Point(403, 20);
-            this.checkBox_.Name = "checkBox_";
-            this.checkBox_.Size = new System.Drawing.Size(15, 14);
-            this.checkBox_.TabIndex = 55;
-            this.checkBox_.UseVisualStyleBackColor = true;
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(172, 23);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 56;
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(409, 19);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 57;
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(218, 19);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 58;
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // groupBox6
-            // 
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.dateTimePicker_Filtrar_datafilnal);
-            this.groupBox6.Location = new System.Drawing.Point(501, 84);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(248, 46);
-            this.groupBox6.TabIndex = 59;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Data Final";
-            this.groupBox6.Visible = false;
-            // 
-            // dateTimePicker_Filtrar_datafilnal
-            // 
-            this.dateTimePicker_Filtrar_datafilnal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Filtrar_datafilnal.Location = new System.Drawing.Point(10, 17);
-            this.dateTimePicker_Filtrar_datafilnal.Name = "dateTimePicker_Filtrar_datafilnal";
-            this.dateTimePicker_Filtrar_datafilnal.Size = new System.Drawing.Size(197, 20);
-            this.dateTimePicker_Filtrar_datafilnal.TabIndex = 18;
+            this.button_Filtrar.Location = new System.Drawing.Point(24, 195);
+            this.button_Filtrar.Name = "button_Filtrar";
+            this.button_Filtrar.Size = new System.Drawing.Size(75, 23);
+            this.button_Filtrar.TabIndex = 28;
+            this.button_Filtrar.Text = "FILTRAR";
+            this.button_Filtrar.UseVisualStyleBackColor = true;
             // 
             // groupBox7
             // 
@@ -523,14 +397,142 @@
             this.columnHeader4.Text = "DATA";
             this.columnHeader4.Width = 141;
             // 
-            // button_Filtrar
+            // groupBox6
             // 
-            this.button_Filtrar.Location = new System.Drawing.Point(24, 195);
-            this.button_Filtrar.Name = "button_Filtrar";
-            this.button_Filtrar.Size = new System.Drawing.Size(75, 23);
-            this.button_Filtrar.TabIndex = 28;
-            this.button_Filtrar.Text = "FILRAR";
-            this.button_Filtrar.UseVisualStyleBackColor = true;
+            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox6.Controls.Add(this.dateTimePicker_Filtrar_datafilnal);
+            this.groupBox6.Location = new System.Drawing.Point(501, 84);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(248, 46);
+            this.groupBox6.TabIndex = 59;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Data Final";
+            this.groupBox6.Visible = false;
+            // 
+            // dateTimePicker_Filtrar_datafilnal
+            // 
+            this.dateTimePicker_Filtrar_datafilnal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Filtrar_datafilnal.Location = new System.Drawing.Point(10, 17);
+            this.dateTimePicker_Filtrar_datafilnal.Name = "dateTimePicker_Filtrar_datafilnal";
+            this.dateTimePicker_Filtrar_datafilnal.Size = new System.Drawing.Size(197, 20);
+            this.dateTimePicker_Filtrar_datafilnal.TabIndex = 18;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.dateTimePicker_Filtrar_datainicial);
+            this.groupBox2.Location = new System.Drawing.Point(501, 26);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(248, 46);
+            this.groupBox2.TabIndex = 53;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Data Inicial";
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(15, 20);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 58;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // dateTimePicker_Filtrar_datainicial
+            // 
+            this.dateTimePicker_Filtrar_datainicial.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Filtrar_datainicial.Location = new System.Drawing.Point(41, 17);
+            this.dateTimePicker_Filtrar_datainicial.Name = "dateTimePicker_Filtrar_datainicial";
+            this.dateTimePicker_Filtrar_datainicial.Size = new System.Drawing.Size(197, 20);
+            this.dateTimePicker_Filtrar_datainicial.TabIndex = 18;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.checkBox2);
+            this.groupBox3.Controls.Add(this.comboBox_Filtrar_Genero);
+            this.groupBox3.Location = new System.Drawing.Point(24, 78);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(186, 52);
+            this.groupBox3.TabIndex = 52;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Genero";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(12, 23);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 56;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // comboBox_Filtrar_Genero
+            // 
+            this.comboBox_Filtrar_Genero.FormattingEnabled = true;
+            this.comboBox_Filtrar_Genero.Location = new System.Drawing.Point(38, 20);
+            this.comboBox_Filtrar_Genero.Name = "comboBox_Filtrar_Genero";
+            this.comboBox_Filtrar_Genero.Size = new System.Drawing.Size(138, 21);
+            this.comboBox_Filtrar_Genero.TabIndex = 19;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.textBox_Filtrar_Nome);
+            this.groupBox4.Controls.Add(this.checkBox_);
+            this.groupBox4.Location = new System.Drawing.Point(23, 26);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(436, 46);
+            this.groupBox4.TabIndex = 51;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Nome";
+            // 
+            // textBox_Filtrar_Nome
+            // 
+            this.textBox_Filtrar_Nome.Location = new System.Drawing.Point(38, 17);
+            this.textBox_Filtrar_Nome.Multiline = true;
+            this.textBox_Filtrar_Nome.Name = "textBox_Filtrar_Nome";
+            this.textBox_Filtrar_Nome.Size = new System.Drawing.Size(389, 20);
+            this.textBox_Filtrar_Nome.TabIndex = 7;
+            // 
+            // checkBox_
+            // 
+            this.checkBox_.AutoSize = true;
+            this.checkBox_.Location = new System.Drawing.Point(13, 20);
+            this.checkBox_.Name = "checkBox_";
+            this.checkBox_.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_.TabIndex = 55;
+            this.checkBox_.UseVisualStyleBackColor = true;
+            this.checkBox_.CheckedChanged += new System.EventHandler(this.checkBox__CheckedChanged);
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.checkBox3);
+            this.groupBox5.Controls.Add(this.textBox_Filtrar_Local);
+            this.groupBox5.Location = new System.Drawing.Point(24, 140);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(435, 49);
+            this.groupBox5.TabIndex = 54;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Local";
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(13, 22);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 57;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Filtrar_Local
+            // 
+            this.textBox_Filtrar_Local.Location = new System.Drawing.Point(39, 17);
+            this.textBox_Filtrar_Local.Multiline = true;
+            this.textBox_Filtrar_Local.Name = "textBox_Filtrar_Local";
+            this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
+            this.textBox_Filtrar_Local.TabIndex = 20;
             // 
             // Form_Principal
             // 
@@ -555,6 +557,8 @@
             this.groupBox_Local.ResumeLayout(false);
             this.groupBox_Local.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox6.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -563,8 +567,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

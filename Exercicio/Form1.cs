@@ -104,14 +104,27 @@ namespace Exercicio
 
         private void button_Editar_Click(object sender, EventArgs e)
         {
-            REFFILME.NOME_FILME = textBox_Filtrar_Nome.Text;
+            Filme.NOME_FILME = textBox_Nome.Text;
 
+            listView_roll.SelectedItems[0].Text = textBox_Nome.Text;
+            listView_roll.SelectedItems[0].SubItems[1].Text = comboBox_Genero.Text;
+            listView_roll.SelectedItems[0].SubItems[2].Text = textBox_Local.Text;
+            listView_roll.SelectedItems[0].SubItems[3].Text = dateTimePicker_Data.Value.ToShortDateString();
+
+            button_Editar.Enabled = false;
+            button_Adicionar.Enabled = true;
 
         }
 
         private void listView_roll_DoubleClick(object sender, EventArgs e)
         {
             button_Adicionar.Enabled = false;
+            button_Editar.Enabled = true;
+        }
+
+        private void checkBox__CheckedChanged(object sender, EventArgs e)
+        {
+
         }
 
     }
