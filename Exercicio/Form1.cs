@@ -17,6 +17,8 @@ namespace Exercicio
     {
         Dictionary<string, List<Filmes>> DICIONARIO = new Dictionary<string, List<Filmes>>();
         List<Filmes> LISTA_FILMES = new List<Filmes>();
+        Filmes Filme = new Filmes();
+        Filmes REFFILME;
 
         public Form_Principal()
         {
@@ -35,7 +37,6 @@ namespace Exercicio
 
         public void Adicionar()
         {
-            Filmes Filme = new Filmes();
             List<Filmes> LISTA = new List<Filmes>();
             ListViewItem LISTA_VIEW = new ListViewItem();
 
@@ -86,16 +87,6 @@ namespace Exercicio
             //    }
             //}
         }
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-                 
-            
-        }
         public void comboBox_Genero_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -109,6 +100,18 @@ namespace Exercicio
         private void button_Adicionar_Click(object sender, EventArgs e)
         {
             Adicionar();
+        }
+
+        private void button_Editar_Click(object sender, EventArgs e)
+        {
+            REFFILME.NOME_FILME = textBox_Filtrar_Nome.Text;
+
+
+        }
+
+        private void listView_roll_DoubleClick(object sender, EventArgs e)
+        {
+            button_Adicionar.Enabled = false;
         }
 
     }
