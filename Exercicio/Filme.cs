@@ -14,12 +14,6 @@ namespace Exercicio
         public string NOME_FILME;
         public string GENERO;
         public string LOCAL;
-        public string DATA;
-
-
-        internal void NOME(string p)
-        {
-            throw new NotImplementedException();
-        }
+        public DateTime DATA;
     }
 }

@@ -55,7 +55,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView_roll = new System.Windows.Forms.ListView();
             this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Local = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox_Nome = new System.Windows.Forms.GroupBox();
@@ -69,23 +68,23 @@
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listView_Filtrar = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_Filtrar_datafilnal = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox_Data = new System.Windows.Forms.CheckBox();
             this.dateTimePicker_Filtrar_datainicial = new System.Windows.Forms.DateTimePicker();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox_Genero = new System.Windows.Forms.CheckBox();
             this.comboBox_Filtrar_Genero = new System.Windows.Forms.ComboBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.textBox_Filtrar_Nome = new System.Windows.Forms.TextBox();
-            this.checkBox_ = new System.Windows.Forms.CheckBox();
+            this.checkBox_Nome = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox_Local = new System.Windows.Forms.CheckBox();
             this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
+            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox_Data.SuspendLayout();
@@ -223,22 +222,17 @@
             // Nome
             // 
             this.Nome.Text = "NOME DO FILME";
-            this.Nome.Width = 233;
-            // 
-            // Genero
-            // 
-            this.Genero.Text = "GENERO";
-            this.Genero.Width = 170;
+            this.Nome.Width = 240;
             // 
             // Local
             // 
             this.Local.Text = "LOCAL";
-            this.Local.Width = 166;
+            this.Local.Width = 177;
             // 
             // Data
             // 
             this.Data.Text = "DATA";
-            this.Data.Width = 141;
+            this.Data.Width = 125;
             // 
             // groupBox_Nome
             // 
@@ -324,6 +318,7 @@
             this.button_Filtrar.TabIndex = 28;
             this.button_Filtrar.Text = "FILTRAR";
             this.button_Filtrar.UseVisualStyleBackColor = true;
+            this.button_Filtrar.Click += new System.EventHandler(this.button_Filtrar_Click);
             // 
             // groupBox7
             // 
@@ -339,7 +334,6 @@
             // 
             this.listView_Filtrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
             this.columnHeader3,
             this.columnHeader4});
             listViewGroup10.Header = "Ação";
@@ -380,22 +374,17 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "NOME DO FILME";
-            this.columnHeader1.Width = 233;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "GENERO";
-            this.columnHeader2.Width = 170;
+            this.columnHeader1.Width = 333;
             // 
             // columnHeader3
             // 
             this.columnHeader3.Text = "LOCAL";
-            this.columnHeader3.Width = 166;
+            this.columnHeader3.Width = 139;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "DATA";
-            this.columnHeader4.Width = 141;
+            this.columnHeader4.Width = 314;
             // 
             // groupBox6
             // 
@@ -412,7 +401,7 @@
             // dateTimePicker_Filtrar_datafilnal
             // 
             this.dateTimePicker_Filtrar_datafilnal.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Filtrar_datafilnal.Location = new System.Drawing.Point(10, 17);
+            this.dateTimePicker_Filtrar_datafilnal.Location = new System.Drawing.Point(40, 17);
             this.dateTimePicker_Filtrar_datafilnal.Name = "dateTimePicker_Filtrar_datafilnal";
             this.dateTimePicker_Filtrar_datafilnal.Size = new System.Drawing.Size(197, 20);
             this.dateTimePicker_Filtrar_datafilnal.TabIndex = 18;
@@ -420,7 +409,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox2.Controls.Add(this.checkBox4);
+            this.groupBox2.Controls.Add(this.checkBox_Data);
             this.groupBox2.Controls.Add(this.dateTimePicker_Filtrar_datainicial);
             this.groupBox2.Location = new System.Drawing.Point(501, 26);
             this.groupBox2.Name = "groupBox2";
@@ -429,14 +418,14 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Data Inicial";
             // 
-            // checkBox4
+            // checkBox_Data
             // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Location = new System.Drawing.Point(15, 20);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(15, 14);
-            this.checkBox4.TabIndex = 58;
-            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox_Data.AutoSize = true;
+            this.checkBox_Data.Location = new System.Drawing.Point(15, 20);
+            this.checkBox_Data.Name = "checkBox_Data";
+            this.checkBox_Data.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Data.TabIndex = 58;
+            this.checkBox_Data.UseVisualStyleBackColor = true;
             // 
             // dateTimePicker_Filtrar_datainicial
             // 
@@ -449,7 +438,7 @@
             // groupBox3
             // 
             this.groupBox3.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox3.Controls.Add(this.checkBox2);
+            this.groupBox3.Controls.Add(this.checkBox_Genero);
             this.groupBox3.Controls.Add(this.comboBox_Filtrar_Genero);
             this.groupBox3.Location = new System.Drawing.Point(24, 78);
             this.groupBox3.Name = "groupBox3";
@@ -458,14 +447,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Genero";
             // 
-            // checkBox2
+            // checkBox_Genero
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(12, 23);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(15, 14);
-            this.checkBox2.TabIndex = 56;
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox_Genero.AutoSize = true;
+            this.checkBox_Genero.Location = new System.Drawing.Point(12, 23);
+            this.checkBox_Genero.Name = "checkBox_Genero";
+            this.checkBox_Genero.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Genero.TabIndex = 56;
+            this.checkBox_Genero.UseVisualStyleBackColor = true;
             // 
             // comboBox_Filtrar_Genero
             // 
@@ -479,7 +468,7 @@
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Transparent;
             this.groupBox4.Controls.Add(this.textBox_Filtrar_Nome);
-            this.groupBox4.Controls.Add(this.checkBox_);
+            this.groupBox4.Controls.Add(this.checkBox_Nome);
             this.groupBox4.Location = new System.Drawing.Point(23, 26);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(436, 46);
@@ -495,20 +484,20 @@
             this.textBox_Filtrar_Nome.Size = new System.Drawing.Size(389, 20);
             this.textBox_Filtrar_Nome.TabIndex = 7;
             // 
-            // checkBox_
+            // checkBox_Nome
             // 
-            this.checkBox_.AutoSize = true;
-            this.checkBox_.Location = new System.Drawing.Point(13, 20);
-            this.checkBox_.Name = "checkBox_";
-            this.checkBox_.Size = new System.Drawing.Size(15, 14);
-            this.checkBox_.TabIndex = 55;
-            this.checkBox_.UseVisualStyleBackColor = true;
-            this.checkBox_.CheckedChanged += new System.EventHandler(this.checkBox__CheckedChanged);
+            this.checkBox_Nome.AutoSize = true;
+            this.checkBox_Nome.Location = new System.Drawing.Point(13, 20);
+            this.checkBox_Nome.Name = "checkBox_Nome";
+            this.checkBox_Nome.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Nome.TabIndex = 55;
+            this.checkBox_Nome.UseVisualStyleBackColor = true;
+            this.checkBox_Nome.CheckedChanged += new System.EventHandler(this.checkBox__CheckedChanged);
             // 
             // groupBox5
             // 
             this.groupBox5.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox5.Controls.Add(this.checkBox3);
+            this.groupBox5.Controls.Add(this.checkBox_Local);
             this.groupBox5.Controls.Add(this.textBox_Filtrar_Local);
             this.groupBox5.Location = new System.Drawing.Point(24, 140);
             this.groupBox5.Name = "groupBox5";
@@ -517,14 +506,14 @@
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Local";
             // 
-            // checkBox3
+            // checkBox_Local
             // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(13, 22);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(15, 14);
-            this.checkBox3.TabIndex = 57;
-            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox_Local.AutoSize = true;
+            this.checkBox_Local.Location = new System.Drawing.Point(13, 22);
+            this.checkBox_Local.Name = "checkBox_Local";
+            this.checkBox_Local.Size = new System.Drawing.Size(15, 14);
+            this.checkBox_Local.TabIndex = 57;
+            this.checkBox_Local.UseVisualStyleBackColor = true;
             // 
             // textBox_Filtrar_Local
             // 
@@ -533,6 +522,11 @@
             this.textBox_Filtrar_Local.Name = "textBox_Filtrar_Local";
             this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
             this.textBox_Filtrar_Local.TabIndex = 20;
+            // 
+            // Genero
+            // 
+            this.Genero.Text = "GENERO";
+            this.Genero.Width = 171;
             // 
             // Form_Principal
             // 
@@ -589,30 +583,29 @@
         private System.Windows.Forms.TabPage tabPage2;
         public System.Windows.Forms.ListView listView_roll;
         private System.Windows.Forms.ColumnHeader Nome;
-        private System.Windows.Forms.ColumnHeader Genero;
         private System.Windows.Forms.ColumnHeader Local;
         private System.Windows.Forms.ColumnHeader Data;
         private System.Windows.Forms.GroupBox groupBox6;
         public System.Windows.Forms.DateTimePicker dateTimePicker_Filtrar_datafilnal;
-        private System.Windows.Forms.CheckBox checkBox_;
+        private System.Windows.Forms.CheckBox checkBox_Nome;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.CheckBox checkBox4;
+        private System.Windows.Forms.CheckBox checkBox_Data;
         public System.Windows.Forms.DateTimePicker dateTimePicker_Filtrar_datainicial;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox_Genero;
         public System.Windows.Forms.ComboBox comboBox_Filtrar_Genero;
         private System.Windows.Forms.GroupBox groupBox4;
         public System.Windows.Forms.TextBox textBox_Filtrar_Nome;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.CheckBox checkBox_Local;
         public System.Windows.Forms.TextBox textBox_Filtrar_Local;
         private System.Windows.Forms.Button button_Filtrar;
         private System.Windows.Forms.GroupBox groupBox7;
         public System.Windows.Forms.ListView listView_Filtrar;
         private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ColumnHeader Genero;
 
 
 
