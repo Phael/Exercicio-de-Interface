@@ -55,6 +55,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listView_roll = new System.Windows.Forms.ListView();
             this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Local = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox_Nome = new System.Windows.Forms.GroupBox();
@@ -70,7 +71,7 @@
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.groupBox_data_filnal = new System.Windows.Forms.GroupBox();
             this.dateTimePicker_Filtrar_datafilnal = new System.Windows.Forms.DateTimePicker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.checkBox_Data = new System.Windows.Forms.CheckBox();
@@ -84,7 +85,7 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox_Local = new System.Windows.Forms.CheckBox();
             this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
-            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.button_Limpar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox_Data.SuspendLayout();
@@ -94,7 +95,7 @@
             this.groupBox_Local.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox7.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupBox_data_filnal.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -224,6 +225,11 @@
             this.Nome.Text = "NOME DO FILME";
             this.Nome.Width = 240;
             // 
+            // Genero
+            // 
+            this.Genero.Text = "GENERO";
+            this.Genero.Width = 171;
+            // 
             // Local
             // 
             this.Local.Text = "LOCAL";
@@ -295,9 +301,10 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button_Limpar);
             this.tabPage2.Controls.Add(this.button_Filtrar);
             this.tabPage2.Controls.Add(this.groupBox7);
-            this.tabPage2.Controls.Add(this.groupBox6);
+            this.tabPage2.Controls.Add(this.groupBox_data_filnal);
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Controls.Add(this.groupBox3);
             this.tabPage2.Controls.Add(this.groupBox4);
@@ -386,17 +393,17 @@
             this.columnHeader4.Text = "DATA";
             this.columnHeader4.Width = 314;
             // 
-            // groupBox6
+            // groupBox_data_filnal
             // 
-            this.groupBox6.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox6.Controls.Add(this.dateTimePicker_Filtrar_datafilnal);
-            this.groupBox6.Location = new System.Drawing.Point(501, 84);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(248, 46);
-            this.groupBox6.TabIndex = 59;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Data Final";
-            this.groupBox6.Visible = false;
+            this.groupBox_data_filnal.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_data_filnal.Controls.Add(this.dateTimePicker_Filtrar_datafilnal);
+            this.groupBox_data_filnal.Location = new System.Drawing.Point(501, 84);
+            this.groupBox_data_filnal.Name = "groupBox_data_filnal";
+            this.groupBox_data_filnal.Size = new System.Drawing.Size(248, 46);
+            this.groupBox_data_filnal.TabIndex = 59;
+            this.groupBox_data_filnal.TabStop = false;
+            this.groupBox_data_filnal.Text = "Data Final";
+            this.groupBox_data_filnal.Visible = false;
             // 
             // dateTimePicker_Filtrar_datafilnal
             // 
@@ -426,6 +433,7 @@
             this.checkBox_Data.Size = new System.Drawing.Size(15, 14);
             this.checkBox_Data.TabIndex = 58;
             this.checkBox_Data.UseVisualStyleBackColor = true;
+            this.checkBox_Data.CheckedChanged += new System.EventHandler(this.checkBox_Data_CheckedChanged);
             // 
             // dateTimePicker_Filtrar_datainicial
             // 
@@ -492,7 +500,6 @@
             this.checkBox_Nome.Size = new System.Drawing.Size(15, 14);
             this.checkBox_Nome.TabIndex = 55;
             this.checkBox_Nome.UseVisualStyleBackColor = true;
-            this.checkBox_Nome.CheckedChanged += new System.EventHandler(this.checkBox__CheckedChanged);
             // 
             // groupBox5
             // 
@@ -523,10 +530,15 @@
             this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
             this.textBox_Filtrar_Local.TabIndex = 20;
             // 
-            // Genero
+            // button_Limpar
             // 
-            this.Genero.Text = "GENERO";
-            this.Genero.Width = 171;
+            this.button_Limpar.Location = new System.Drawing.Point(115, 195);
+            this.button_Limpar.Name = "button_Limpar";
+            this.button_Limpar.Size = new System.Drawing.Size(75, 23);
+            this.button_Limpar.TabIndex = 61;
+            this.button_Limpar.Text = "LIMPAR";
+            this.button_Limpar.UseVisualStyleBackColor = true;
+            this.button_Limpar.Click += new System.EventHandler(this.button_Limpar_Click);
             // 
             // Form_Principal
             // 
@@ -552,7 +564,7 @@
             this.groupBox_Local.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
+            this.groupBox_data_filnal.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -585,7 +597,7 @@
         private System.Windows.Forms.ColumnHeader Nome;
         private System.Windows.Forms.ColumnHeader Local;
         private System.Windows.Forms.ColumnHeader Data;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupBox_data_filnal;
         public System.Windows.Forms.DateTimePicker dateTimePicker_Filtrar_datafilnal;
         private System.Windows.Forms.CheckBox checkBox_Nome;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -606,6 +618,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader Genero;
+        private System.Windows.Forms.Button button_Limpar;
 
 
 
