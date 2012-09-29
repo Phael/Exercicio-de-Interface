@@ -24,6 +24,7 @@ namespace Exercicio
 
         public void Limpar()
         {
+            //Rotina para limpar os texbox , combobox, datetimepicker
             textBox_Nome.ResetText();
             comboBox_Genero.ResetText();
             textBox_Local.ResetText();
@@ -33,14 +34,24 @@ namespace Exercicio
 
         public void Limpar_Filtro()
         {
-           
+            //Rotina para limpar os campos do filtro
+            textBox_Filtrar_Nome.ResetText();
+            comboBox_Filtrar_Genero.ResetText();
+            textBox_Filtrar_Local.ResetText();
+            dateTimePicker_Filtrar_datainicial.ResetText();
+            dateTimePicker_Filtrar_datafilnal.ResetText();
+            checkBox_Data.Checked = false;
+            checkBox_Nome.Checked = false;
+            checkBox_Genero.Checked = false;
+            checkBox_Local.Checked = false;
 
+            listView_Filtrar.Items.Clear();
         }
 
         public void Adicionar()
         {
+            //Instacia da Classe Filme
             Filmes Filme = new Filmes();
-            ListViewItem LIST_VIEW = new ListViewItem();
 
             if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty) && (textBox_Local.Text != string.Empty))
             {
@@ -56,16 +67,19 @@ namespace Exercicio
                 //se nao houver ele cria uma nova lista e insere no dicionario
                 if(DICIONARIO.ContainsKey(comboBox_Genero.SelectedIndex))
                 {
+                    //se a chave ja existir ele pega a referencia ja existente e adiciona a lista nesta posição
                     List<Filmes> LISTAREF = DICIONARIO[comboBox_Genero.SelectedIndex];
                     LISTAREF.Add(Filme);
                 }
                 else
                 {
+                    //se a chave nao existir ele cria uma nova lista armazena os valores e insere a nova chave       
                     List<Filmes> LISTA = new List<Filmes>();
                     LISTA.Add(Filme);
                     DICIONARIO.Add(comboBox_Genero.SelectedIndex, LISTA);
                 }
-                
+
+                ListViewItem LIST_VIEW = new ListViewItem();
                 //Adiciona valores no lisView_roll
                 LIST_VIEW.Text = Filme.NOME_FILME;
                 LIST_VIEW.SubItems.Add(Filme.GENERO);
@@ -77,7 +91,7 @@ namespace Exercicio
                 //Verificar Valores do Dicionario
                 Dictionary<int, List<Filmes>> DIC = DICIONARIO;
 
-                //Limpar();
+                Limpar();
             }
             else
             {
@@ -92,6 +106,7 @@ namespace Exercicio
 
         public void Form1_Load(object sender, EventArgs e)
         {
+            //Insere os valores do grupo do listview no Combobox_Genero
             comboBox_Genero.DataSource = listView_roll.Groups;
             comboBox_Filtrar_Genero.DataSource = listView_Filtrar.Groups;
    
@@ -110,69 +125,39 @@ namespace Exercicio
             string LOCAL_FILME = listView_roll.SelectedItems[0].SubItems[2].Text;            
             string DATA_FILME = listView_roll.SelectedItems[0].SubItems[3].Text;
 
-            //foreach (KeyValuePair<int, List<Filmes>> DIC in DICIONARIO)
-            //{
-            //    foreach (Filmes VALORES in DIC.Value)
-            //    {
-            //        LIST.Add(VALORES);
-            //    }
-            //}
 
-            //for(int I=0; I < DICIONARIO.Count;++I)
-            //{
-            //    for(int J=0; J < DICIONARIO.Values.Count;++J)
-            //    {
-            //        if(VALOR.NOME_FILME == NOME_FILME)
-            //        {
-            //        }
-            //    }
-                    
-            //}
-            //foreach(KeyValuePair<int, List<Filmes>>  ALTERARDICIONARIO in DICIONARIO ) 
-            //{
-            //    foreach(Filmes ALTERARFILME in ALTERARDICIONARIO.Value)
-            //    {
-            //        if (NOME_FILME == ALTERARFILME.NOME_FILME && GENERO_FILME == ALTERARFILME.GENERO && LOCAL_FILME == ALTERARFILME.LOCAL && DATA_FILME == ALTERARFILME.DATA.ToShortDateString())
-            //        {
-            //            ALTERARFILME.NOME_FILME = textBox_Nome.Text;
-            //            ALTERARFILME.LOCAL = textBox_Local.Text;
-            //            ALTERARFILME.GENERO = comboBox_Genero.Text;
-            //            ALTERARFILME.LOCAL = textBox_Local.Text;
-            //            if (DICIONARIO.ContainsKey(comboBox_Genero.SelectedIndex))
-            //            {
-            //                List<Filmes> LISTAREF = DICIONARIO[comboBox_Genero.SelectedIndex];
-            //                LISTAREF.Add(ALTERARFILME);
+            foreach(KeyValuePair<int, List<Filmes>>  ALTERARDICIONARIO in DICIONARIO ) 
+            {
+                foreach(Filmes ALTERARFILME in ALTERARDICIONARIO.Value)
+                {
+                    if (NOME_FILME == ALTERARFILME.NOME_FILME && GENERO_FILME == ALTERARFILME.GENERO && LOCAL_FILME == ALTERARFILME.LOCAL && DATA_FILME == ALTERARFILME.DATA.ToShortDateString())
+                    {
+                        ALTERARFILME.NOME_FILME = textBox_Nome.Text;
+                        ALTERARFILME.LOCAL = textBox_Local.Text;
+                        ALTERARFILME.GENERO = comboBox_Genero.Text;
+                        ALTERARFILME.LOCAL = textBox_Local.Text;                    
+                    }
+                }
 
-            //            }
-            //            else
-            //            {
-            //                List<Filmes> LISTA = new List<Filmes>();
-            //                LISTA.Add(ALTERARFILME);
-            //                DICIONARIO.Add(comboBox_Genero.SelectedIndex, LISTA);
-            //            }
+             }
 
-            //        }
-            //    }
-                
-            // }
+            listView_roll.SelectedItems[0].Remove();
 
-            //listView_roll.SelectedItems[0].Remove();
-
-            //ListViewItem NOVA = new ListViewItem();
-            //NOVA.Text = textBox_Nome.Text;
-            //NOVA.SubItems.Add(comboBox_Genero.Text);
-            //NOVA.SubItems.Add(textBox_Local.Text);
-            //NOVA.SubItems.Add(dateTimePicker_Data.Value.ToShortDateString());
-            //NOVA.Group = listView_roll.Groups[comboBox_Genero.Text];
-            //listView_roll.Items.Add(NOVA);
+            ListViewItem NOVA = new ListViewItem();
+            NOVA.Text = textBox_Nome.Text;
+            NOVA.SubItems.Add(comboBox_Genero.Text);
+            NOVA.SubItems.Add(textBox_Local.Text);
+            NOVA.SubItems.Add(dateTimePicker_Data.Value.ToShortDateString());
+            NOVA.Group = listView_roll.Groups[comboBox_Genero.Text];
+            listView_roll.Items.Add(NOVA);
 
             //verificação de inserção de valores
-            //Dictionary<int, List<Filmes>> DIC = DICIONARIO;            
+            Dictionary<int, List<Filmes>> DIC = DICIONARIO;            
 
-            //button_Editar.Enabled = false;
-            //button_Adicionar.Enabled = true;
+            button_Editar.Enabled = false;
+            button_Adicionar.Enabled = true;
 
-            //Limpar();
+            Limpar();
 
 
 
@@ -234,12 +219,13 @@ namespace Exercicio
                             }
 
                         }
-
+                        
+                            
                     }
 
                 }
 
-                //Apresenta os Valores no ListView_Filtrar
+                //Apresenta a lista filtrada no ListView_Filtrar
                 foreach (Filmes ADD in LIST)
                 {
                     ListViewItem LIST_VIEW_FILTRAR = new ListViewItem();
@@ -266,21 +252,15 @@ namespace Exercicio
 
         private void button_Limpar_Click(object sender, EventArgs e)
         {
-            //Limpar_Filtro();
+            Limpar_Filtro();
             button_Filtrar.Enabled = true;
             button_Limpar.Enabled = false;
 
-            textBox_Filtrar_Nome.ResetText();
-            comboBox_Filtrar_Genero.ResetText();
-            textBox_Local.ResetText();
-            dateTimePicker_Filtrar_datainicial.ResetText();
-            dateTimePicker_Filtrar_datafilnal.ResetText();
-            checkBox_Data.Checked = false;
-            checkBox_Nome.Checked = false;
-            checkBox_Genero.Checked = false;
-            checkBox_Local.Checked = false;
+        }
 
-            listView_Filtrar.Items.Clear();
+        private void listView_Filtrar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
     }

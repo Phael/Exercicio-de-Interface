@@ -65,6 +65,7 @@
             this.groupBox_Local = new System.Windows.Forms.GroupBox();
             this.textBox_Local = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button_Limpar = new System.Windows.Forms.Button();
             this.button_Filtrar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.listView_Filtrar = new System.Windows.Forms.ListView();
@@ -85,7 +86,6 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox_Local = new System.Windows.Forms.CheckBox();
             this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
-            this.button_Limpar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox_Data.SuspendLayout();
@@ -317,6 +317,16 @@
             this.tabPage2.Text = "FILTRAR";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button_Limpar
+            // 
+            this.button_Limpar.Location = new System.Drawing.Point(115, 195);
+            this.button_Limpar.Name = "button_Limpar";
+            this.button_Limpar.Size = new System.Drawing.Size(75, 23);
+            this.button_Limpar.TabIndex = 61;
+            this.button_Limpar.Text = "LIMPAR";
+            this.button_Limpar.UseVisualStyleBackColor = true;
+            this.button_Limpar.Click += new System.EventHandler(this.button_Limpar_Click);
+            // 
             // button_Filtrar
             // 
             this.button_Filtrar.Location = new System.Drawing.Point(24, 195);
@@ -377,6 +387,7 @@
             this.listView_Filtrar.TabIndex = 27;
             this.listView_Filtrar.UseCompatibleStateImageBehavior = false;
             this.listView_Filtrar.View = System.Windows.Forms.View.Details;
+            this.listView_Filtrar.SelectedIndexChanged += new System.EventHandler(this.listView_Filtrar_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -529,16 +540,6 @@
             this.textBox_Filtrar_Local.Name = "textBox_Filtrar_Local";
             this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
             this.textBox_Filtrar_Local.TabIndex = 20;
-            // 
-            // button_Limpar
-            // 
-            this.button_Limpar.Location = new System.Drawing.Point(115, 195);
-            this.button_Limpar.Name = "button_Limpar";
-            this.button_Limpar.Size = new System.Drawing.Size(75, 23);
-            this.button_Limpar.TabIndex = 61;
-            this.button_Limpar.Text = "LIMPAR";
-            this.button_Limpar.UseVisualStyleBackColor = true;
-            this.button_Limpar.Click += new System.EventHandler(this.button_Limpar_Click);
             // 
             // Form_Principal
             // 
