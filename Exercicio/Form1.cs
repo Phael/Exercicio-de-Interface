@@ -33,16 +33,7 @@ namespace Exercicio
 
         public void Limpar_Filtro()
         {
-            textBox_Filtrar_Nome.ResetText();
-            comboBox_Filtrar_Genero.ResetText();
-            textBox_Local.ResetText();
-            dateTimePicker_Filtrar_datainicial.ResetText();
-            dateTimePicker_Filtrar_datafilnal.ResetText();
-            checkBox_Data.Checked = false;
-            checkBox_Nome.Checked = false;
-            checkBox_Genero.Checked = false;
-            checkBox_Local.Checked = false;
-            
+           
 
         }
 
@@ -233,18 +224,15 @@ namespace Exercicio
                         }
                         if (FILME.LOCAL != textBox_Filtrar_Local.Text && checkBox_Local.Checked == true)
                         {
-                            if ((FILME.DATA < dateTimePicker_Filtrar_datafilnal.MaxDate) && (FILME.DATA > dateTimePicker_Filtrar_datainicial))
+                            LIST.Remove(FILME);
+                        }
+                        if (checkBox_Data.Checked == true)
+                        {
+                            if ((FILME.DATA.Date > dateTimePicker_Filtrar_datafilnal.Value) && (FILME.DATA.Date < dateTimePicker_Filtrar_datainicial.Value))
                             {
                                 LIST.Remove(FILME);
                             }
-                            else
-                            {
-                                MessageBox.Show("Atencao", "Data Incorreta", MessageBoxButtons.OK);
-                            }
-                        }
-                        if (FILME.DATA != dateTimePicker_Filtrar_datafilnal.Value && checkBox_Data.Checked == true)
-                        {
-                            LIST.Remove(FILME);
+
                         }
 
                     }
@@ -278,9 +266,21 @@ namespace Exercicio
 
         private void button_Limpar_Click(object sender, EventArgs e)
         {
-            Limpar_Filtro();
+            //Limpar_Filtro();
             button_Filtrar.Enabled = true;
             button_Limpar.Enabled = false;
+
+            textBox_Filtrar_Nome.ResetText();
+            comboBox_Filtrar_Genero.ResetText();
+            textBox_Local.ResetText();
+            dateTimePicker_Filtrar_datainicial.ResetText();
+            dateTimePicker_Filtrar_datafilnal.ResetText();
+            checkBox_Data.Checked = false;
+            checkBox_Nome.Checked = false;
+            checkBox_Genero.Checked = false;
+            checkBox_Local.Checked = false;
+
+            listView_Filtrar.Items.Clear();
         }
 
     }
