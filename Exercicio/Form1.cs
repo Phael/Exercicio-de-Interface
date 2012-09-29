@@ -15,6 +15,7 @@ namespace Exercicio
 
     public partial class Form_Principal : Form
     {
+        //Dicionario global para armazenamento das listas que conterao os objetos
         Dictionary<int, List<Filmes>> DICIONARIO = new Dictionary<int, List<Filmes>>();
         
         public Form_Principal()
@@ -79,6 +80,7 @@ namespace Exercicio
                     DICIONARIO.Add(comboBox_Genero.SelectedIndex, LISTA);
                 }
 
+                //cria o listview itens para o listview_Roll
                 ListViewItem LIST_VIEW = new ListViewItem();
                 //Adiciona valores no lisView_roll
                 LIST_VIEW.Text = Filme.NOME_FILME;
@@ -95,7 +97,7 @@ namespace Exercicio
             }
             else
             {
-                MessageBox.Show("Preencha todos os Campos", "Campos Nao Preenchidos", MessageBoxButtons.OK);
+                MessageBox.Show("Preencha todos os Campos", "Atenção", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
             }
 
         }
@@ -111,6 +113,7 @@ namespace Exercicio
             comboBox_Filtrar_Genero.DataSource = listView_Filtrar.Groups;
    
         }
+
         private void button_Adicionar_Click(object sender, EventArgs e)
         {
             Adicionar();
@@ -118,8 +121,7 @@ namespace Exercicio
 
         private void button_Editar_Click(object sender, EventArgs e)
         {
-            //List<Filmes> LIST = new List<Filmes>();
-
+            //Atribui os Valores da posição selecionada as variaveis criadas
             string NOME_FILME = listView_roll.SelectedItems[0].Text;
             string GENERO_FILME = listView_roll.SelectedItems[0].SubItems[1].Text;
             string LOCAL_FILME = listView_roll.SelectedItems[0].SubItems[2].Text;            
@@ -143,7 +145,9 @@ namespace Exercicio
 
             listView_roll.SelectedItems[0].Remove();
 
+            //Cria um novo listaView para inserçao dos valores
             ListViewItem NOVA = new ListViewItem();
+            //Insere os novos Valores
             NOVA.Text = textBox_Nome.Text;
             NOVA.SubItems.Add(comboBox_Genero.Text);
             NOVA.SubItems.Add(textBox_Local.Text);
@@ -158,8 +162,6 @@ namespace Exercicio
             button_Adicionar.Enabled = true;
 
             Limpar();
-
-
 
         }
 
@@ -217,10 +219,9 @@ namespace Exercicio
                             {
                                 LIST.Remove(FILME);
                             }
-
-                        }
-                        
                             
+                        }
+                                                          
                     }
 
                 }
@@ -235,11 +236,14 @@ namespace Exercicio
                     LIST_VIEW_FILTRAR.SubItems.Add(ADD.DATA.ToShortDateString());
                     LIST_VIEW_FILTRAR.Group = listView_Filtrar.Groups[ADD.GENERO];
                     listView_Filtrar.Items.Add(LIST_VIEW_FILTRAR);
+
+                    button_Filtrar.Enabled = false;
+                    button_Limpar.Enabled = true;
+
                 }
             }
 
-            button_Filtrar.Enabled = false;
-            button_Limpar.Enabled = true;
+            
         }
 
         private void checkBox_Data_CheckedChanged(object sender, EventArgs e)
