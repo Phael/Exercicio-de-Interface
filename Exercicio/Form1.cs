@@ -32,23 +32,6 @@ namespace Exercicio
             dateTimePicker_Data.ResetText();
 
         }
-
-        public void Limpar_Filtro()
-        {
-            //Rotina para limpar os campos do filtro
-            textBox_Filtrar_Nome.ResetText();
-            comboBox_Filtrar_Genero.ResetText();
-            textBox_Filtrar_Local.ResetText();
-            dateTimePicker_Filtrar_datainicial.ResetText();
-            dateTimePicker_Filtrar_datafilnal.ResetText();
-            checkBox_Data.Checked = false;
-            checkBox_Nome.Checked = false;
-            checkBox_Genero.Checked = false;
-            checkBox_Local.Checked = false;
-
-            listView_Filtrar.Items.Clear();
-        }
-
         public void Adicionar()
         {
             //Instacia da Classe Filme
@@ -153,10 +136,7 @@ namespace Exercicio
             NOVA.SubItems.Add(textBox_Local.Text);
             NOVA.SubItems.Add(dateTimePicker_Data.Value.ToShortDateString());
             NOVA.Group = listView_roll.Groups[comboBox_Genero.Text];
-            listView_roll.Items.Add(NOVA);
-
-            //verificação de inserção de valores
-            Dictionary<int, List<Filmes>> DIC = DICIONARIO;            
+            listView_roll.Items.Add(NOVA);           
 
             button_Editar.Enabled = false;
             button_Adicionar.Enabled = true;
@@ -179,71 +159,72 @@ namespace Exercicio
         }
         private void button_Filtrar_Click(object sender, EventArgs e)
         {
-            List<Filmes> LIST = new List<Filmes>();
-
-            //Adiciona os Valores Da Lista do Dicionario nos valores de uma nova lista chamada LIST
-            foreach (KeyValuePair<int, List<Filmes>> DIC in DICIONARIO)
+            if((checkBox_Data.Checked == true || checkBox_Genero.Checked == true || checkBox_Nome.Checked == true || checkBox_Local.Checked == true) && (textBox_Filtrar_Local.Text != string.Empty || textBox_Filtrar_Nome.Text != string.Empty || comboBox_Filtrar_Genero.Text != string.Empty))
             {
-                foreach (Filmes VALORES in DIC.Value)
-                {
-                    LIST.Add(VALORES);
-                }
-            }
-
-            //Verifica se o LIST nao esta vazio
-            if (LIST.Count != 0)
-            {
-                foreach (KeyValuePair<int, List<Filmes>> PESQUISA in DICIONARIO)
-                {
-                    foreach (Filmes FILME in PESQUISA.Value)
+               
+                    //Lista Para armazenar os valores contidos na lista do dicionario
+                    List<Filmes> LIST = new List<Filmes>();
+                 
+                    //Adiciona os Valores Da Lista do Dicionario nos valores de uma nova lista chamada LIST
+                    foreach (KeyValuePair<int, List<Filmes>> DIC in DICIONARIO)
                     {
-                        
-                        //Sequencia de Condiçoes para verificar as pesquisas selecionadas
-                        if (FILME.NOME_FILME != textBox_Filtrar_Nome.Text && checkBox_Nome.Checked == true)
+                        foreach (Filmes VALORES in DIC.Value)
                         {
-                            //Toda condição verdadeira remove os itens desnecessarios do LIST, ate ser encontrado apenas 
-                            //os valores selecionados pelo usuario
-                            LIST.Remove(FILME);
+                            LIST.Add(VALORES);
                         }
-                        if (FILME.GENERO != comboBox_Filtrar_Genero.Text && checkBox_Genero.Checked == true)
-                        {
-                            LIST.Remove(FILME);
-                        }
-                        if (FILME.LOCAL != textBox_Filtrar_Local.Text && checkBox_Local.Checked == true)
-                        {
-                            LIST.Remove(FILME);
-                        }
-                        if (checkBox_Data.Checked == true)
-                        {
-                            if ((FILME.DATA.Date > dateTimePicker_Filtrar_datafilnal.Value) && (FILME.DATA.Date < dateTimePicker_Filtrar_datainicial.Value))
-                            {
-                                LIST.Remove(FILME);
-                            }
-                            
-                        }
-                                                          
                     }
+                    //Verifica se o LIST nao esta vazio
+                    if (LIST.Count != 0)
+                    {
+                        foreach (KeyValuePair<int, List<Filmes>> PESQUISA in DICIONARIO)
+                        {
+                            foreach (Filmes FILME in PESQUISA.Value)
+                            {
+                                //Sequencia de Condiçoes para verificar as pesquisas selecionadas
+                                if (FILME.NOME_FILME != textBox_Filtrar_Nome.Text && checkBox_Nome.Checked == true)
+                                {
+                                    //Toda condição verdadeira remove os itens desnecessarios do LIST, ate ser encontrado apenas 
+                                    //os valores selecionados pelo usuario
+                                    LIST.Remove(FILME);
+                                }
+                                if (FILME.GENERO != comboBox_Filtrar_Genero.Text && checkBox_Genero.Checked == true)
+                                {
+                                    LIST.Remove(FILME);
+                                }
+                                if (FILME.LOCAL != textBox_Filtrar_Local.Text && checkBox_Local.Checked == true)
+                                {
+                                    LIST.Remove(FILME);
+                                }
+                                if (checkBox_Data.Checked == true)
+                                {
+                                    if ((FILME.DATA.Date > dateTimePicker_Filtrar_datafilnal.Value) && (FILME.DATA.Date < dateTimePicker_Filtrar_datainicial.Value))
+                                    {
+                                        LIST.Remove(FILME);
+                                    }
+                                }
+                        }
+                            listView_Filtrar.Items.Clear();
 
-                }
+                        //Apresenta a lista filtrada no ListView_Filtrar
+                        foreach (Filmes ADD in LIST)
+                        {
+                            ListViewItem LIST_VIEW_FILTRAR = new ListViewItem();
 
-                //Apresenta a lista filtrada no ListView_Filtrar
-                foreach (Filmes ADD in LIST)
-                {
-                    ListViewItem LIST_VIEW_FILTRAR = new ListViewItem();
+                            LIST_VIEW_FILTRAR.Text = ADD.NOME_FILME;
+                            LIST_VIEW_FILTRAR.SubItems.Add(ADD.LOCAL);
+                            LIST_VIEW_FILTRAR.SubItems.Add(ADD.DATA.ToShortDateString());
+                            LIST_VIEW_FILTRAR.Group = listView_Filtrar.Groups[ADD.GENERO];
+                            listView_Filtrar.Items.Add(LIST_VIEW_FILTRAR);
 
-                    LIST_VIEW_FILTRAR.Text = ADD.NOME_FILME;
-                    LIST_VIEW_FILTRAR.SubItems.Add(ADD.LOCAL);
-                    LIST_VIEW_FILTRAR.SubItems.Add(ADD.DATA.ToShortDateString());
-                    LIST_VIEW_FILTRAR.Group = listView_Filtrar.Groups[ADD.GENERO];
-                    listView_Filtrar.Items.Add(LIST_VIEW_FILTRAR);
+                            button_Filtrar.Enabled = true;
 
-                    button_Filtrar.Enabled = false;
-                    button_Limpar.Enabled = true;
-
+                        }
+                    }
                 }
             }
-
-            
+             else
+                MessageBox.Show("Selecione uma opção de Pesquisa e insira um valor a ser Pesquisado", "Atenção", MessageBoxButtons.OK,MessageBoxIcon.Exclamation); 
+                
         }
 
         private void checkBox_Data_CheckedChanged(object sender, EventArgs e)
@@ -253,15 +234,6 @@ namespace Exercicio
             else
                 groupBox_data_filnal.Visible = false;
         }
-
-        private void button_Limpar_Click(object sender, EventArgs e)
-        {
-            Limpar_Filtro();
-            button_Filtrar.Enabled = true;
-            button_Limpar.Enabled = false;
-
-        }
-
         private void listView_Filtrar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
