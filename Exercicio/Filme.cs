@@ -11,9 +11,15 @@ namespace Exercicio
 {
     class Filmes 
     {
-        public string NOME_FILME;
+        public string NOME_FILME ;
         public string GENERO;
         public string LOCAL;
         public DateTime DATA;
+
+        public void ADD()
+        {
+
+        }
     }
+    
 }

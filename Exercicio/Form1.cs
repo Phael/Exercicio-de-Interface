@@ -183,8 +183,7 @@ namespace Exercicio
                                 //Sequencia de Condiçoes para verificar as pesquisas selecionadas
                                 if (FILME.NOME_FILME != textBox_Filtrar_Nome.Text && checkBox_Nome.Checked == true)
                                 {
-                                    //Toda condição verdadeira remove os itens desnecessarios do LIST, ate ser encontrado apenas 
-                                    //os valores selecionados pelo usuario
+                                    //Toda condição verdadeira remove os itens desnecessarios do LIST, ate ser encontrado apenas os valores selecionados pelo usuario
                                     LIST.Remove(FILME);
                                 }
                                 if (FILME.GENERO != comboBox_Filtrar_Genero.Text && checkBox_Genero.Checked == true)
@@ -197,7 +196,7 @@ namespace Exercicio
                                 }
                                 if (checkBox_Data.Checked == true)
                                 {
-                                    if ((FILME.DATA.Date > dateTimePicker_Filtrar_datafilnal.Value) && (FILME.DATA.Date < dateTimePicker_Filtrar_datainicial.Value))
+                                    if ((FILME.DATA.Date < dateTimePicker_Filtrar_datafilnal.Value) && (FILME.DATA.Date > dateTimePicker_Filtrar_datainicial.Value))
                                     {
                                         LIST.Remove(FILME);
                                     }
@@ -229,6 +228,7 @@ namespace Exercicio
 
         private void checkBox_Data_CheckedChanged(object sender, EventArgs e)
         {
+            //ativa o calendario para filtrar a Data Final
             if (checkBox_Data.Checked == true)
                 groupBox_data_filnal.Visible = true;
             else
