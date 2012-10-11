@@ -6,10 +6,9 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;  
 
  
-
-
 namespace Exercicio
 {    
 
@@ -37,7 +36,7 @@ namespace Exercicio
             //Instacia da Classe Filme
             Filmes Filme = new Filmes();
 
-            if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty) && (textBox_Local.Text != string.Empty))
+            if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty))
             {
                                                
                 //Adiciona o FIlme a Lista filmes e ao Dicionario
@@ -76,11 +75,25 @@ namespace Exercicio
                 //Verificar Valores do Dicionario
                 Dictionary<int, List<Filmes>> DIC = DICIONARIO;
 
+                label_obrigatorio1.Visible = false;
+                label_Obrigatorio2.Visible = false;
+
                 Limpar();
             }
-            else
+            else if(textBox_Nome.Text == string.Empty && comboBox_Genero.Text == string.Empty)
             {
-                MessageBox.Show("Preencha todos os Campos", "Atenção", MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                label_obrigatorio1.Visible = true;
+                label_Obrigatorio2.Visible = true;
+            }
+            else if (comboBox_Genero.Text == string.Empty)
+            {
+                label_Obrigatorio2.Visible = true;
+                label_obrigatorio1.Visible = false;
+            }
+            else if(textBox_Nome.Text == string.Empty)
+            {
+                label_Obrigatorio2.Visible = false;
+                label_obrigatorio1.Visible = true;
             }
 
         }
@@ -111,37 +124,48 @@ namespace Exercicio
             string DATA_FILME = listView_roll.SelectedItems[0].SubItems[3].Text;
 
 
-            foreach(KeyValuePair<int, List<Filmes>>  ALTERARDICIONARIO in DICIONARIO ) 
+            if (textBox_Nome.Text != string.Empty && comboBox_Genero.Text != string.Empty)
             {
-                foreach(Filmes ALTERARFILME in ALTERARDICIONARIO.Value)
+                foreach (KeyValuePair<int, List<Filmes>> ALTERARDICIONARIO in DICIONARIO)
                 {
-                    if (NOME_FILME == ALTERARFILME.NOME_FILME && GENERO_FILME == ALTERARFILME.GENERO && LOCAL_FILME == ALTERARFILME.LOCAL && DATA_FILME == ALTERARFILME.DATA.ToShortDateString())
+                    foreach (Filmes ALTERARFILME in ALTERARDICIONARIO.Value)
                     {
-                        ALTERARFILME.NOME_FILME = textBox_Nome.Text;
-                        ALTERARFILME.LOCAL = textBox_Local.Text;
-                        ALTERARFILME.GENERO = comboBox_Genero.Text;
-                        ALTERARFILME.LOCAL = textBox_Local.Text;                    
+                        if (NOME_FILME == ALTERARFILME.NOME_FILME && GENERO_FILME == ALTERARFILME.GENERO && LOCAL_FILME == ALTERARFILME.LOCAL && DATA_FILME == ALTERARFILME.DATA.ToShortDateString())
+                        {
+                            ALTERARFILME.NOME_FILME = textBox_Nome.Text;
+                            ALTERARFILME.LOCAL = textBox_Local.Text;
+                            ALTERARFILME.GENERO = comboBox_Genero.Text;
+                            ALTERARFILME.LOCAL = textBox_Local.Text;
+                        }
                     }
+
                 }
 
-             }
+                listView_roll.SelectedItems[0].Remove();
 
-            listView_roll.SelectedItems[0].Remove();
+                //Cria um novo listaView para inserçao dos valores
+                ListViewItem NOVA = new ListViewItem();
+                //Insere os novos Valores
+                NOVA.Text = textBox_Nome.Text;
+                NOVA.SubItems.Add(comboBox_Genero.Text);
+                NOVA.SubItems.Add(textBox_Local.Text);
+                NOVA.SubItems.Add(dateTimePicker_Data.Value.ToShortDateString());
+                NOVA.Group = listView_roll.Groups[comboBox_Genero.Text];
+                listView_roll.Items.Add(NOVA);
 
-            //Cria um novo listaView para inserçao dos valores
-            ListViewItem NOVA = new ListViewItem();
-            //Insere os novos Valores
-            NOVA.Text = textBox_Nome.Text;
-            NOVA.SubItems.Add(comboBox_Genero.Text);
-            NOVA.SubItems.Add(textBox_Local.Text);
-            NOVA.SubItems.Add(dateTimePicker_Data.Value.ToShortDateString());
-            NOVA.Group = listView_roll.Groups[comboBox_Genero.Text];
-            listView_roll.Items.Add(NOVA);           
+                button_Editar.Enabled = false;
+                button_Adicionar.Enabled = true;
 
-            button_Editar.Enabled = false;
-            button_Adicionar.Enabled = true;
+                label_obrigatorio1.Visible = false;
+                label_Obrigatorio2.Visible = false;
 
-            Limpar();
+                Limpar();
+            }
+            else
+            {
+                label_obrigatorio1.Visible = true;
+                label_Obrigatorio2.Visible = true;
+            }
 
         }
 
@@ -237,6 +261,21 @@ namespace Exercicio
         private void listView_Filtrar_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button_Adicionar_MouseHover(object sender, EventArgs e)
+        {
+            label_Info.Text = "Adiciona os Valores inseridos, no Historico de Filmes";
+        }
+
+        private void button_Adicionar_MouseLeave(object sender, EventArgs e)
+        {
+            label_Info.Text = "Para Editar Clique Duas vezes sobre o item Desejado";
+        }
+
+        private void button_Editar_MouseHover(object sender, EventArgs e)
+        {
+            label_Info.Text = "Clique em Editar para salvar as alterações";
         }
 
     }

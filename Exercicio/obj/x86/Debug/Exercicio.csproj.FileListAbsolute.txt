@@ -58,3 +58,13 @@ E:\Rafael\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Rafael\Exercicio\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Rafael\Exercicio\Exercicio\obj\x86\Debug\Exercicio.exe
 E:\Rafael\Exercicio\Exercicio\obj\x86\Debug\Exercicio.pdb
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\Exercicio.exe
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\Exercicio.pdb
+F:\Exercicio-de-Interface\Exercicio\bin\Debug\Exercicio.exe
+F:\Exercicio-de-Interface\Exercicio\bin\Debug\Exercicio.pdb
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\Exercicio.Filtrar.resources
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\Exercicio.Form_Principal.resources
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\Exercicio.Properties.Resources.resources
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\Exercicio-de-Interface\Exercicio\obj\x86\Debug\GenerateResource.write.1.tlog
