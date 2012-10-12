@@ -60,6 +60,13 @@ namespace Exercicio.Properties {
             }
         }
         
+        internal static System.Drawing.Bitmap fundo_azul_claro {
+            get {
+                object obj = ResourceManager.GetObject("fundo+azul+claro", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
         internal static System.Drawing.Bitmap wallcine {
             get {
                 object obj = ResourceManager.GetObject("wallcine", resourceCulture);

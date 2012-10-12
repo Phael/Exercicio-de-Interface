@@ -31,12 +31,43 @@ namespace Exercicio
             dateTimePicker_Data.ResetText();
 
         }
+        public bool VerificaCampos()
+        {
+            if (textBox_Nome.Text != string.Empty && comboBox_Genero.Text != string.Empty)
+            {
+                label_obrigatorio1.Visible = false;
+                label_Obrigatorio2.Visible = false;
+                return true;
+            }
+            else if (textBox_Nome.Text == string.Empty && comboBox_Genero.Text == string.Empty)
+            {
+                label_obrigatorio1.Visible = true;
+                label_Obrigatorio2.Visible = true;
+                return false;
+            }
+            else if (comboBox_Genero.Text == string.Empty)
+            {
+                label_Obrigatorio2.Visible = true;
+                label_obrigatorio1.Visible = false;
+                return false;
+            }
+            else if (textBox_Nome.Text == string.Empty)
+            {
+                label_Obrigatorio2.Visible = false;
+                label_obrigatorio1.Visible = true;
+                return false;
+            }
+            else
+                return false;
+
+        }
+
         public void Adicionar()
         {
             //Instacia da Classe Filme
             Filmes Filme = new Filmes();
 
-            if ((textBox_Nome.Text != string.Empty) && (comboBox_Genero.Text != string.Empty))
+            if (VerificaCampos())
             {
                                                
                 //Adiciona o FIlme a Lista filmes e ao Dicionario
@@ -71,31 +102,10 @@ namespace Exercicio
                 LIST_VIEW.SubItems.Add(Filme.DATA.ToShortDateString());
                 LIST_VIEW.Group = listView_roll.Groups[comboBox_Genero.Text];
                 listView_roll.Items.Add(LIST_VIEW);
-                
-                //Verificar Valores do Dicionario
-                Dictionary<int, List<Filmes>> DIC = DICIONARIO;
-
-                label_obrigatorio1.Visible = false;
-                label_Obrigatorio2.Visible = false;
-
                 Limpar();
-            }
-            else if(textBox_Nome.Text == string.Empty && comboBox_Genero.Text == string.Empty)
-            {
-                label_obrigatorio1.Visible = true;
-                label_Obrigatorio2.Visible = true;
-            }
-            else if (comboBox_Genero.Text == string.Empty)
-            {
-                label_Obrigatorio2.Visible = true;
-                label_obrigatorio1.Visible = false;
-            }
-            else if(textBox_Nome.Text == string.Empty)
-            {
-                label_Obrigatorio2.Visible = false;
-                label_obrigatorio1.Visible = true;
-            }
 
+
+            }
         }
         public void comboBox_Genero_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -124,7 +134,7 @@ namespace Exercicio
             string DATA_FILME = listView_roll.SelectedItems[0].SubItems[3].Text;
 
 
-            if (textBox_Nome.Text != string.Empty && comboBox_Genero.Text != string.Empty)
+            if (VerificaCampos())
             {
                 foreach (KeyValuePair<int, List<Filmes>> ALTERARDICIONARIO in DICIONARIO)
                 {
@@ -155,18 +165,7 @@ namespace Exercicio
 
                 button_Editar.Enabled = false;
                 button_Adicionar.Enabled = true;
-
-                label_obrigatorio1.Visible = false;
-                label_Obrigatorio2.Visible = false;
-
-                Limpar();
-            }
-            else
-            {
-                label_obrigatorio1.Visible = true;
-                label_Obrigatorio2.Visible = true;
-            }
-
+            }            
         }
 
         private void listView_roll_DoubleClick(object sender, EventArgs e)
