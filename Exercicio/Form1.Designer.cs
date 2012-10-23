@@ -28,15 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Romance", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Ficção Ciêntifica", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
-            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup1 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup2 = new System.Windows.Forms.ListViewGroup("Romance", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup3 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
@@ -46,7 +37,40 @@
             System.Windows.Forms.ListViewGroup listViewGroup7 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup8 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
             System.Windows.Forms.ListViewGroup listViewGroup9 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup10 = new System.Windows.Forms.ListViewGroup("Ação", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup11 = new System.Windows.Forms.ListViewGroup("Romance", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup12 = new System.Windows.Forms.ListViewGroup("Aventura", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup13 = new System.Windows.Forms.ListViewGroup("Infantil", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup14 = new System.Windows.Forms.ListViewGroup("Ficção Ciêntifica", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup15 = new System.Windows.Forms.ListViewGroup("Documentário", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup16 = new System.Windows.Forms.ListViewGroup("Suspense", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup17 = new System.Windows.Forms.ListViewGroup("Terror", System.Windows.Forms.HorizontalAlignment.Left);
+            System.Windows.Forms.ListViewGroup listViewGroup18 = new System.Windows.Forms.ListViewGroup("Comédia", System.Windows.Forms.HorizontalAlignment.Left);
             this.tabControl_Principal = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label_Obrigatorio2 = new System.Windows.Forms.Label();
+            this.label_obrigatorio1 = new System.Windows.Forms.Label();
+            this.label_Info = new System.Windows.Forms.Label();
+            this.groupBox_Data = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker_Data = new System.Windows.Forms.DateTimePicker();
+            this.groupBox_Genero = new System.Windows.Forms.GroupBox();
+            this.comboBox_Genero = new System.Windows.Forms.ComboBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.listView_roll = new System.Windows.Forms.ListView();
+            this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Local = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.groupBox_Nome = new System.Windows.Forms.GroupBox();
+            this.textBox_Nome = new System.Windows.Forms.TextBox();
+            this.button_Adicionar = new System.Windows.Forms.Button();
+            this.button_Editar = new System.Windows.Forms.Button();
+            this.groupBox_Local = new System.Windows.Forms.GroupBox();
+            this.textBox_Local = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.button_Filtrar = new System.Windows.Forms.Button();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
@@ -68,27 +92,16 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.checkBox_Local = new System.Windows.Forms.CheckBox();
             this.textBox_Filtrar_Local = new System.Windows.Forms.TextBox();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label_Obrigatorio2 = new System.Windows.Forms.Label();
-            this.label_obrigatorio1 = new System.Windows.Forms.Label();
-            this.label_Info = new System.Windows.Forms.Label();
-            this.groupBox_Data = new System.Windows.Forms.GroupBox();
-            this.dateTimePicker_Data = new System.Windows.Forms.DateTimePicker();
-            this.groupBox_Genero = new System.Windows.Forms.GroupBox();
-            this.comboBox_Genero = new System.Windows.Forms.ComboBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.listView_roll = new System.Windows.Forms.ListView();
-            this.Nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Genero = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Local = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.groupBox_Nome = new System.Windows.Forms.GroupBox();
-            this.textBox_Nome = new System.Windows.Forms.TextBox();
-            this.button_Adicionar = new System.Windows.Forms.Button();
-            this.button_Editar = new System.Windows.Forms.Button();
-            this.groupBox_Local = new System.Windows.Forms.GroupBox();
-            this.textBox_Local = new System.Windows.Forms.TextBox();
+            this.label_info_Filtrar = new System.Windows.Forms.Label();
+            this.label_Info_Filtro_pes = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl_Principal.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox_Data.SuspendLayout();
+            this.groupBox_Genero.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox_Nome.SuspendLayout();
+            this.groupBox_Local.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox_data_filnal.SuspendLayout();
@@ -96,12 +109,6 @@
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            this.groupBox_Data.SuspendLayout();
-            this.groupBox_Genero.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox_Nome.SuspendLayout();
-            this.groupBox_Local.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl_Principal
@@ -117,10 +124,314 @@
             this.tabControl_Principal.Size = new System.Drawing.Size(799, 560);
             this.tabControl_Principal.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.BackColor = System.Drawing.Color.White;
+            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage1.Controls.Add(this.label4);
+            this.tabPage1.Controls.Add(this.label3);
+            this.tabPage1.Controls.Add(this.label2);
+            this.tabPage1.Controls.Add(this.label1);
+            this.tabPage1.Controls.Add(this.label_Obrigatorio2);
+            this.tabPage1.Controls.Add(this.label_obrigatorio1);
+            this.tabPage1.Controls.Add(this.label_Info);
+            this.tabPage1.Controls.Add(this.groupBox_Data);
+            this.tabPage1.Controls.Add(this.groupBox_Genero);
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.groupBox_Nome);
+            this.tabPage1.Controls.Add(this.button_Adicionar);
+            this.tabPage1.Controls.Add(this.button_Editar);
+            this.tabPage1.Controls.Add(this.groupBox_Local);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(791, 534);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "CADASTRAR";
+            // 
+            // label4
+            // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(606, 496);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(22, 24);
+            this.label4.TabIndex = 59;
+            this.label4.Text = "* ";
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(626, 498);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(116, 13);
+            this.label3.TabIndex = 58;
+            this.label3.Text = "=  Campos Obrigatorios";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(198, 112);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(15, 20);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "*";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(433, 44);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(15, 20);
+            this.label1.TabIndex = 56;
+            this.label1.Text = "*";
+            // 
+            // label_Obrigatorio2
+            // 
+            this.label_Obrigatorio2.AutoSize = true;
+            this.label_Obrigatorio2.BackColor = System.Drawing.Color.Transparent;
+            this.label_Obrigatorio2.ForeColor = System.Drawing.Color.Red;
+            this.label_Obrigatorio2.Location = new System.Drawing.Point(102, 139);
+            this.label_Obrigatorio2.Name = "label_Obrigatorio2";
+            this.label_Obrigatorio2.Size = new System.Drawing.Size(82, 13);
+            this.label_Obrigatorio2.TabIndex = 55;
+            this.label_Obrigatorio2.Text = "OBRIGATORIO";
+            this.label_Obrigatorio2.Visible = false;
+            // 
+            // label_obrigatorio1
+            // 
+            this.label_obrigatorio1.AutoSize = true;
+            this.label_obrigatorio1.BackColor = System.Drawing.Color.Transparent;
+            this.label_obrigatorio1.ForeColor = System.Drawing.Color.Red;
+            this.label_obrigatorio1.Location = new System.Drawing.Point(345, 73);
+            this.label_obrigatorio1.Name = "label_obrigatorio1";
+            this.label_obrigatorio1.Size = new System.Drawing.Size(82, 13);
+            this.label_obrigatorio1.TabIndex = 54;
+            this.label_obrigatorio1.Text = "OBRIGATORIO";
+            this.label_obrigatorio1.Visible = false;
+            // 
+            // label_Info
+            // 
+            this.label_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Info.AutoSize = true;
+            this.label_Info.BackColor = System.Drawing.Color.Transparent;
+            this.label_Info.ForeColor = System.Drawing.Color.Black;
+            this.label_Info.Location = new System.Drawing.Point(29, 498);
+            this.label_Info.Name = "label_Info";
+            this.label_Info.Size = new System.Drawing.Size(258, 13);
+            this.label_Info.TabIndex = 53;
+            this.label_Info.Text = "Para Editar Clique Duas vezes sobre o item Desejado";
+            // 
+            // groupBox_Data
+            // 
+            this.groupBox_Data.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Data.Controls.Add(this.dateTimePicker_Data);
+            this.groupBox_Data.Location = new System.Drawing.Point(486, 27);
+            this.groupBox_Data.Name = "groupBox_Data";
+            this.groupBox_Data.Size = new System.Drawing.Size(248, 46);
+            this.groupBox_Data.TabIndex = 49;
+            this.groupBox_Data.TabStop = false;
+            this.groupBox_Data.Text = "Data";
+            // 
+            // dateTimePicker_Data
+            // 
+            this.dateTimePicker_Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker_Data.Location = new System.Drawing.Point(10, 17);
+            this.dateTimePicker_Data.Name = "dateTimePicker_Data";
+            this.dateTimePicker_Data.Size = new System.Drawing.Size(226, 20);
+            this.dateTimePicker_Data.TabIndex = 2;
+            // 
+            // groupBox_Genero
+            // 
+            this.groupBox_Genero.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Genero.Controls.Add(this.comboBox_Genero);
+            this.groupBox_Genero.Location = new System.Drawing.Point(25, 87);
+            this.groupBox_Genero.Name = "groupBox_Genero";
+            this.groupBox_Genero.Size = new System.Drawing.Size(170, 52);
+            this.groupBox_Genero.TabIndex = 48;
+            this.groupBox_Genero.TabStop = false;
+            this.groupBox_Genero.Text = "Genero";
+            // 
+            // comboBox_Genero
+            // 
+            this.comboBox_Genero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.comboBox_Genero.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.comboBox_Genero.FormattingEnabled = true;
+            this.comboBox_Genero.Location = new System.Drawing.Point(8, 20);
+            this.comboBox_Genero.Name = "comboBox_Genero";
+            this.comboBox_Genero.Size = new System.Drawing.Size(149, 21);
+            this.comboBox_Genero.TabIndex = 3;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.groupBox1.Controls.Add(this.listView_roll);
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(24, 236);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(725, 250);
+            this.groupBox1.TabIndex = 52;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Historico de Filmes";
+            // 
+            // listView_roll
+            // 
+            this.listView_roll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.listView_roll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listView_roll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.listView_roll.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Nome,
+            this.Genero,
+            this.Local,
+            this.Data});
+            listViewGroup1.Header = "Ação";
+            listViewGroup1.Name = "Ação";
+            listViewGroup2.Header = "Romance";
+            listViewGroup2.Name = "Romance";
+            listViewGroup3.Header = "Aventura";
+            listViewGroup3.Name = "Aventura";
+            listViewGroup4.Header = "Infantil";
+            listViewGroup4.Name = "Infantil";
+            listViewGroup5.Header = "Ficção Ciêntifica";
+            listViewGroup5.Name = "Ficção Ciêntifica";
+            listViewGroup6.Header = "Documentário";
+            listViewGroup6.Name = "Documentário";
+            listViewGroup7.Header = "Suspense";
+            listViewGroup7.Name = "Suspense";
+            listViewGroup8.Header = "Terror";
+            listViewGroup8.Name = "Terror";
+            listViewGroup9.Header = "Comédia";
+            listViewGroup9.Name = "Comédia";
+            this.listView_roll.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
+            listViewGroup1,
+            listViewGroup2,
+            listViewGroup3,
+            listViewGroup4,
+            listViewGroup5,
+            listViewGroup6,
+            listViewGroup7,
+            listViewGroup8,
+            listViewGroup9});
+            this.listView_roll.Location = new System.Drawing.Point(9, 19);
+            this.listView_roll.Name = "listView_roll";
+            this.listView_roll.Size = new System.Drawing.Size(707, 222);
+            this.listView_roll.TabIndex = 7;
+            this.listView_roll.UseCompatibleStateImageBehavior = false;
+            this.listView_roll.View = System.Windows.Forms.View.Details;
+            this.listView_roll.SelectedIndexChanged += new System.EventHandler(this.listView_roll_SelectedIndexChanged);
+            this.listView_roll.DoubleClick += new System.EventHandler(this.listView_roll_DoubleClick);
+            // 
+            // Nome
+            // 
+            this.Nome.Text = "TÍTULO";
+            this.Nome.Width = 240;
+            // 
+            // Genero
+            // 
+            this.Genero.Text = "GENERO";
+            this.Genero.Width = 171;
+            // 
+            // Local
+            // 
+            this.Local.Text = "LOCAL";
+            this.Local.Width = 176;
+            // 
+            // Data
+            // 
+            this.Data.Text = "DATA";
+            this.Data.Width = 125;
+            // 
+            // groupBox_Nome
+            // 
+            this.groupBox_Nome.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Nome.Controls.Add(this.textBox_Nome);
+            this.groupBox_Nome.Location = new System.Drawing.Point(24, 24);
+            this.groupBox_Nome.Name = "groupBox_Nome";
+            this.groupBox_Nome.Size = new System.Drawing.Size(406, 46);
+            this.groupBox_Nome.TabIndex = 47;
+            this.groupBox_Nome.TabStop = false;
+            this.groupBox_Nome.Text = "Título";
+            // 
+            // textBox_Nome
+            // 
+            this.textBox_Nome.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.textBox_Nome.Location = new System.Drawing.Point(8, 17);
+            this.textBox_Nome.Multiline = true;
+            this.textBox_Nome.Name = "textBox_Nome";
+            this.textBox_Nome.Size = new System.Drawing.Size(386, 20);
+            this.textBox_Nome.TabIndex = 1;
+            // 
+            // button_Adicionar
+            // 
+            this.button_Adicionar.BackColor = System.Drawing.Color.Silver;
+            this.button_Adicionar.Location = new System.Drawing.Point(26, 207);
+            this.button_Adicionar.Name = "button_Adicionar";
+            this.button_Adicionar.Size = new System.Drawing.Size(75, 23);
+            this.button_Adicionar.TabIndex = 5;
+            this.button_Adicionar.Text = "ADICIONAR";
+            this.button_Adicionar.UseVisualStyleBackColor = false;
+            this.button_Adicionar.Click += new System.EventHandler(this.button_Adicionar_Click);
+            this.button_Adicionar.MouseLeave += new System.EventHandler(this.button_Adicionar_MouseLeave);
+            this.button_Adicionar.MouseHover += new System.EventHandler(this.button_Adicionar_MouseHover);
+            // 
+            // button_Editar
+            // 
+            this.button_Editar.BackColor = System.Drawing.Color.Silver;
+            this.button_Editar.Enabled = false;
+            this.button_Editar.Location = new System.Drawing.Point(107, 207);
+            this.button_Editar.Name = "button_Editar";
+            this.button_Editar.Size = new System.Drawing.Size(75, 23);
+            this.button_Editar.TabIndex = 6;
+            this.button_Editar.Text = "EDITAR";
+            this.button_Editar.UseVisualStyleBackColor = false;
+            this.button_Editar.Click += new System.EventHandler(this.button_Editar_Click);
+            this.button_Editar.MouseHover += new System.EventHandler(this.button_Editar_MouseHover);
+            // 
+            // groupBox_Local
+            // 
+            this.groupBox_Local.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox_Local.Controls.Add(this.textBox_Local);
+            this.groupBox_Local.Location = new System.Drawing.Point(25, 152);
+            this.groupBox_Local.Name = "groupBox_Local";
+            this.groupBox_Local.Size = new System.Drawing.Size(405, 46);
+            this.groupBox_Local.TabIndex = 50;
+            this.groupBox_Local.TabStop = false;
+            this.groupBox_Local.Text = "Local";
+            // 
+            // textBox_Local
+            // 
+            this.textBox_Local.Location = new System.Drawing.Point(10, 16);
+            this.textBox_Local.Multiline = true;
+            this.textBox_Local.Name = "textBox_Local";
+            this.textBox_Local.Size = new System.Drawing.Size(384, 20);
+            this.textBox_Local.TabIndex = 4;
+            // 
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
             this.tabPage2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabPage2.Controls.Add(this.label5);
+            this.tabPage2.Controls.Add(this.label_Info_Filtro_pes);
+            this.tabPage2.Controls.Add(this.label_info_Filtrar);
             this.tabPage2.Controls.Add(this.button_Filtrar);
             this.tabPage2.Controls.Add(this.groupBox7);
             this.tabPage2.Controls.Add(this.groupBox_data_filnal);
@@ -145,9 +456,14 @@
             this.button_Filtrar.Text = "FILTRAR";
             this.button_Filtrar.UseVisualStyleBackColor = false;
             this.button_Filtrar.Click += new System.EventHandler(this.button_Filtrar_Click);
+            this.button_Filtrar.MouseLeave += new System.EventHandler(this.button_Filtrar_MouseLeave);
+            this.button_Filtrar.MouseHover += new System.EventHandler(this.button_Filtrar_MouseHover);
             // 
             // groupBox7
             // 
+            this.groupBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox7.BackColor = System.Drawing.Color.Transparent;
             this.groupBox7.Controls.Add(this.listView_Filtrar);
             this.groupBox7.Location = new System.Drawing.Point(24, 226);
@@ -159,7 +475,11 @@
             // 
             // listView_Filtrar
             // 
+            this.listView_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)
+                        | System.Windows.Forms.AnchorStyles.Right)));
             this.listView_Filtrar.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.listView_Filtrar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.listView_Filtrar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader3,
@@ -203,7 +523,7 @@
             // 
             // columnHeader1
             // 
-            this.columnHeader1.Text = "NOME DO FILME";
+            this.columnHeader1.Text = "TÍTULO";
             this.columnHeader1.Width = 342;
             // 
             // columnHeader3
@@ -305,7 +625,7 @@
             this.groupBox4.Size = new System.Drawing.Size(436, 46);
             this.groupBox4.TabIndex = 51;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Nome";
+            this.groupBox4.Text = "Título";
             // 
             // textBox_Filtrar_Nome
             // 
@@ -353,263 +673,39 @@
             this.textBox_Filtrar_Local.Size = new System.Drawing.Size(387, 20);
             this.textBox_Filtrar_Local.TabIndex = 6;
             // 
-            // tabPage1
+            // label_info_Filtrar
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.White;
-            this.tabPage1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.tabPage1.Controls.Add(this.label_Obrigatorio2);
-            this.tabPage1.Controls.Add(this.label_obrigatorio1);
-            this.tabPage1.Controls.Add(this.label_Info);
-            this.tabPage1.Controls.Add(this.groupBox_Data);
-            this.tabPage1.Controls.Add(this.groupBox_Genero);
-            this.tabPage1.Controls.Add(this.groupBox1);
-            this.tabPage1.Controls.Add(this.groupBox_Nome);
-            this.tabPage1.Controls.Add(this.button_Adicionar);
-            this.tabPage1.Controls.Add(this.button_Editar);
-            this.tabPage1.Controls.Add(this.groupBox_Local);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(791, 534);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "CADASTRAR";
+            this.label_info_Filtrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_info_Filtrar.AutoSize = true;
+            this.label_info_Filtrar.Location = new System.Drawing.Point(33, 508);
+            this.label_info_Filtrar.Name = "label_info_Filtrar";
+            this.label_info_Filtrar.Size = new System.Drawing.Size(126, 13);
+            this.label_info_Filtrar.TabIndex = 61;
+            this.label_info_Filtrar.Text = "Filtra os Filmes desejados";
+            this.label_info_Filtrar.Visible = false;
             // 
-            // label_Obrigatorio2
+            // label_Info_Filtro_pes
             // 
-            this.label_Obrigatorio2.AutoSize = true;
-            this.label_Obrigatorio2.BackColor = System.Drawing.Color.Transparent;
-            this.label_Obrigatorio2.ForeColor = System.Drawing.Color.Red;
-            this.label_Obrigatorio2.Location = new System.Drawing.Point(102, 139);
-            this.label_Obrigatorio2.Name = "label_Obrigatorio2";
-            this.label_Obrigatorio2.Size = new System.Drawing.Size(82, 13);
-            this.label_Obrigatorio2.TabIndex = 55;
-            this.label_Obrigatorio2.Text = "OBRIGATORIO";
-            this.label_Obrigatorio2.Visible = false;
+            this.label_Info_Filtro_pes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                        | System.Windows.Forms.AnchorStyles.Left)));
+            this.label_Info_Filtro_pes.AutoSize = true;
+            this.label_Info_Filtro_pes.ForeColor = System.Drawing.Color.Red;
+            this.label_Info_Filtro_pes.Location = new System.Drawing.Point(118, 200);
+            this.label_Info_Filtro_pes.Name = "label_Info_Filtro_pes";
+            this.label_Info_Filtro_pes.Size = new System.Drawing.Size(175, 13);
+            this.label_Info_Filtro_pes.TabIndex = 62;
+            this.label_Info_Filtro_pes.Text = "NENHUM FILTRO SELECIONADO";
+            this.label_Info_Filtro_pes.Visible = false;
             // 
-            // label_obrigatorio1
+            // label5
             // 
-            this.label_obrigatorio1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label_obrigatorio1.AutoSize = true;
-            this.label_obrigatorio1.BackColor = System.Drawing.Color.Transparent;
-            this.label_obrigatorio1.ForeColor = System.Drawing.Color.Red;
-            this.label_obrigatorio1.Location = new System.Drawing.Point(345, 73);
-            this.label_obrigatorio1.Name = "label_obrigatorio1";
-            this.label_obrigatorio1.Size = new System.Drawing.Size(82, 13);
-            this.label_obrigatorio1.TabIndex = 54;
-            this.label_obrigatorio1.Text = "OBRIGATORIO";
-            this.label_obrigatorio1.Visible = false;
-            // 
-            // label_Info
-            // 
-            this.label_Info.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.label_Info.AutoSize = true;
-            this.label_Info.BackColor = System.Drawing.Color.Transparent;
-            this.label_Info.ForeColor = System.Drawing.Color.Black;
-            this.label_Info.Location = new System.Drawing.Point(29, 498);
-            this.label_Info.Name = "label_Info";
-            this.label_Info.Size = new System.Drawing.Size(258, 13);
-            this.label_Info.TabIndex = 53;
-            this.label_Info.Text = "Para Editar Clique Duas vezes sobre o item Desejado";
-            // 
-            // groupBox_Data
-            // 
-            this.groupBox_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox_Data.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Data.Controls.Add(this.dateTimePicker_Data);
-            this.groupBox_Data.Location = new System.Drawing.Point(486, 27);
-            this.groupBox_Data.Name = "groupBox_Data";
-            this.groupBox_Data.Size = new System.Drawing.Size(248, 46);
-            this.groupBox_Data.TabIndex = 49;
-            this.groupBox_Data.TabStop = false;
-            this.groupBox_Data.Text = "Data";
-            // 
-            // dateTimePicker_Data
-            // 
-            this.dateTimePicker_Data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePicker_Data.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker_Data.Location = new System.Drawing.Point(10, 17);
-            this.dateTimePicker_Data.Name = "dateTimePicker_Data";
-            this.dateTimePicker_Data.Size = new System.Drawing.Size(226, 20);
-            this.dateTimePicker_Data.TabIndex = 2;
-            // 
-            // groupBox_Genero
-            // 
-            this.groupBox_Genero.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Genero.Controls.Add(this.comboBox_Genero);
-            this.groupBox_Genero.Location = new System.Drawing.Point(25, 87);
-            this.groupBox_Genero.Name = "groupBox_Genero";
-            this.groupBox_Genero.Size = new System.Drawing.Size(170, 52);
-            this.groupBox_Genero.TabIndex = 48;
-            this.groupBox_Genero.TabStop = false;
-            this.groupBox_Genero.Text = "Genero";
-            // 
-            // comboBox_Genero
-            // 
-            this.comboBox_Genero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.comboBox_Genero.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.comboBox_Genero.FormattingEnabled = true;
-            this.comboBox_Genero.Location = new System.Drawing.Point(8, 20);
-            this.comboBox_Genero.Name = "comboBox_Genero";
-            this.comboBox_Genero.Size = new System.Drawing.Size(149, 21);
-            this.comboBox_Genero.TabIndex = 3;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.groupBox1.Controls.Add(this.listView_roll);
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(24, 236);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(725, 250);
-            this.groupBox1.TabIndex = 52;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Historico de Filmes";
-            // 
-            // listView_roll
-            // 
-            this.listView_roll.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-                        | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.listView_roll.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.listView_roll.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.listView_roll.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Nome,
-            this.Genero,
-            this.Local,
-            this.Data});
-            listViewGroup1.Header = "Ação";
-            listViewGroup1.Name = "Ação";
-            listViewGroup2.Header = "Romance";
-            listViewGroup2.Name = "Romance";
-            listViewGroup3.Header = "Aventura";
-            listViewGroup3.Name = "Aventura";
-            listViewGroup4.Header = "Infantil";
-            listViewGroup4.Name = "Infantil";
-            listViewGroup5.Header = "Ficção Ciêntifica";
-            listViewGroup5.Name = "Ficção Ciêntifica";
-            listViewGroup6.Header = "Documentário";
-            listViewGroup6.Name = "Documentário";
-            listViewGroup7.Header = "Suspense";
-            listViewGroup7.Name = "Suspense";
-            listViewGroup8.Header = "Terror";
-            listViewGroup8.Name = "Terror";
-            listViewGroup9.Header = "Comédia";
-            listViewGroup9.Name = "Comédia";
-            this.listView_roll.Groups.AddRange(new System.Windows.Forms.ListViewGroup[] {
-            listViewGroup1,
-            listViewGroup2,
-            listViewGroup3,
-            listViewGroup4,
-            listViewGroup5,
-            listViewGroup6,
-            listViewGroup7,
-            listViewGroup8,
-            listViewGroup9});
-            this.listView_roll.Location = new System.Drawing.Point(9, 19);
-            this.listView_roll.Name = "listView_roll";
-            this.listView_roll.Size = new System.Drawing.Size(707, 222);
-            this.listView_roll.TabIndex = 7;
-            this.listView_roll.UseCompatibleStateImageBehavior = false;
-            this.listView_roll.View = System.Windows.Forms.View.Details;
-            this.listView_roll.DoubleClick += new System.EventHandler(this.listView_roll_DoubleClick);
-            // 
-            // Nome
-            // 
-            this.Nome.Text = "NOME DO FILME";
-            this.Nome.Width = 240;
-            // 
-            // Genero
-            // 
-            this.Genero.Text = "GENERO";
-            this.Genero.Width = 171;
-            // 
-            // Local
-            // 
-            this.Local.Text = "LOCAL";
-            this.Local.Width = 176;
-            // 
-            // Data
-            // 
-            this.Data.Text = "DATA";
-            this.Data.Width = 125;
-            // 
-            // groupBox_Nome
-            // 
-            this.groupBox_Nome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox_Nome.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Nome.Controls.Add(this.textBox_Nome);
-            this.groupBox_Nome.Location = new System.Drawing.Point(24, 24);
-            this.groupBox_Nome.Name = "groupBox_Nome";
-            this.groupBox_Nome.Size = new System.Drawing.Size(406, 46);
-            this.groupBox_Nome.TabIndex = 47;
-            this.groupBox_Nome.TabStop = false;
-            this.groupBox_Nome.Text = "Nome";
-            // 
-            // textBox_Nome
-            // 
-            this.textBox_Nome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Nome.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.textBox_Nome.Location = new System.Drawing.Point(8, 17);
-            this.textBox_Nome.Multiline = true;
-            this.textBox_Nome.Name = "textBox_Nome";
-            this.textBox_Nome.Size = new System.Drawing.Size(386, 20);
-            this.textBox_Nome.TabIndex = 1;
-            // 
-            // button_Adicionar
-            // 
-            this.button_Adicionar.BackColor = System.Drawing.Color.Silver;
-            this.button_Adicionar.Location = new System.Drawing.Point(26, 207);
-            this.button_Adicionar.Name = "button_Adicionar";
-            this.button_Adicionar.Size = new System.Drawing.Size(75, 23);
-            this.button_Adicionar.TabIndex = 5;
-            this.button_Adicionar.Text = "ADICIONAR";
-            this.button_Adicionar.UseVisualStyleBackColor = false;
-            this.button_Adicionar.Click += new System.EventHandler(this.button_Adicionar_Click);
-            this.button_Adicionar.MouseLeave += new System.EventHandler(this.button_Adicionar_MouseLeave);
-            this.button_Adicionar.MouseHover += new System.EventHandler(this.button_Adicionar_MouseHover);
-            // 
-            // button_Editar
-            // 
-            this.button_Editar.BackColor = System.Drawing.Color.Silver;
-            this.button_Editar.Enabled = false;
-            this.button_Editar.Location = new System.Drawing.Point(107, 207);
-            this.button_Editar.Name = "button_Editar";
-            this.button_Editar.Size = new System.Drawing.Size(75, 23);
-            this.button_Editar.TabIndex = 6;
-            this.button_Editar.Text = "EDITAR";
-            this.button_Editar.UseVisualStyleBackColor = false;
-            this.button_Editar.Click += new System.EventHandler(this.button_Editar_Click);
-            this.button_Editar.MouseHover += new System.EventHandler(this.button_Editar_MouseHover);
-            // 
-            // groupBox_Local
-            // 
-            this.groupBox_Local.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox_Local.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox_Local.Controls.Add(this.textBox_Local);
-            this.groupBox_Local.Location = new System.Drawing.Point(25, 152);
-            this.groupBox_Local.Name = "groupBox_Local";
-            this.groupBox_Local.Size = new System.Drawing.Size(405, 46);
-            this.groupBox_Local.TabIndex = 50;
-            this.groupBox_Local.TabStop = false;
-            this.groupBox_Local.Text = "Local";
-            // 
-            // textBox_Local
-            // 
-            this.textBox_Local.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox_Local.Location = new System.Drawing.Point(10, 16);
-            this.textBox_Local.Multiline = true;
-            this.textBox_Local.Name = "textBox_Local";
-            this.textBox_Local.Size = new System.Drawing.Size(384, 20);
-            this.textBox_Local.TabIndex = 4;
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(432, 508);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(323, 13);
+            this.label5.TabIndex = 63;
+            this.label5.Text = "Clique na Caixa de seleção desejada e insira um valor a ser filtrador";
             // 
             // Form_Principal
             // 
@@ -624,7 +720,17 @@
             this.Text = "Controle de Filmes 1.0";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl_Principal.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            this.groupBox_Data.ResumeLayout(false);
+            this.groupBox_Genero.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox_Nome.ResumeLayout(false);
+            this.groupBox_Nome.PerformLayout();
+            this.groupBox_Local.ResumeLayout(false);
+            this.groupBox_Local.PerformLayout();
             this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox_data_filnal.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
@@ -635,15 +741,6 @@
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
-            this.groupBox_Data.ResumeLayout(false);
-            this.groupBox_Genero.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox_Nome.ResumeLayout(false);
-            this.groupBox_Nome.PerformLayout();
-            this.groupBox_Local.ResumeLayout(false);
-            this.groupBox_Local.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -692,6 +789,13 @@
         private System.Windows.Forms.Label label_Info;
         private System.Windows.Forms.Label label_Obrigatorio2;
         private System.Windows.Forms.Label label_obrigatorio1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label_info_Filtrar;
+        private System.Windows.Forms.Label label_Info_Filtro_pes;
+        private System.Windows.Forms.Label label5;
 
 
 

@@ -182,22 +182,26 @@ namespace Exercicio
         }
         private void button_Filtrar_Click(object sender, EventArgs e)
         {
-            if((checkBox_Data.Checked == true || checkBox_Genero.Checked == true || checkBox_Nome.Checked == true || checkBox_Local.Checked == true) && (textBox_Filtrar_Local.Text != string.Empty || textBox_Filtrar_Nome.Text != string.Empty || comboBox_Filtrar_Genero.Text != string.Empty))
+            //Lista Para armazenar os valores contidos na lista do dicionario
+            List<Filmes> LIST = new List<Filmes>();
+
+            //Adiciona os Valores Da Lista do Dicionario nos valores de uma nova lista chamada LIST    
+            foreach (KeyValuePair<int, List<Filmes>> DIC in DICIONARIO)
             {
-               
-                    //Lista Para armazenar os valores contidos na lista do dicionario
-                    List<Filmes> LIST = new List<Filmes>();
-                 
-                    //Adiciona os Valores Da Lista do Dicionario nos valores de uma nova lista chamada LIST
-                    foreach (KeyValuePair<int, List<Filmes>> DIC in DICIONARIO)
-                    {
-                        foreach (Filmes VALORES in DIC.Value)
-                        {
-                            LIST.Add(VALORES);
-                        }
-                    }
+                foreach (Filmes VALORES in DIC.Value)
+                {
+                    LIST.Add(VALORES);
+                }
+            }
+            if (LIST.Count > 0)
+            {
+                if ((checkBox_Data.Checked == true || checkBox_Genero.Checked == true || checkBox_Nome.Checked == true || checkBox_Local.Checked == true) && (textBox_Filtrar_Local.Text != string.Empty || textBox_Filtrar_Nome.Text != string.Empty || comboBox_Filtrar_Genero.Text != string.Empty))
+                {
+
+
+
                     //Verifica se o LIST nao esta vazio
-                    if (LIST.Count != 0)
+                    if (LIST.Count > 0)
                     {
                         foreach (KeyValuePair<int, List<Filmes>> PESQUISA in DICIONARIO)
                         {
@@ -224,29 +228,38 @@ namespace Exercicio
                                         LIST.Remove(FILME);
                                     }
                                 }
-                        }
+                            }
+                            label_Info_Filtro_pes.Visible = false;
                             listView_Filtrar.Items.Clear();
 
-                        //Apresenta a lista filtrada no ListView_Filtrar
-                        foreach (Filmes ADD in LIST)
-                        {
-                            ListViewItem LIST_VIEW_FILTRAR = new ListViewItem();
+                            //Apresenta a lista filtrada no ListView_Filtrar
+                            foreach (Filmes ADD in LIST)
+                            {
+                                ListViewItem LIST_VIEW_FILTRAR = new ListViewItem();
 
-                            LIST_VIEW_FILTRAR.Text = ADD.NOME_FILME;
-                            LIST_VIEW_FILTRAR.SubItems.Add(ADD.LOCAL);
-                            LIST_VIEW_FILTRAR.SubItems.Add(ADD.DATA.ToShortDateString());
-                            LIST_VIEW_FILTRAR.Group = listView_Filtrar.Groups[ADD.GENERO];
-                            listView_Filtrar.Items.Add(LIST_VIEW_FILTRAR);
+                                LIST_VIEW_FILTRAR.Text = ADD.NOME_FILME;
+                                LIST_VIEW_FILTRAR.SubItems.Add(ADD.LOCAL);
+                                LIST_VIEW_FILTRAR.SubItems.Add(ADD.DATA.ToShortDateString());
+                                LIST_VIEW_FILTRAR.Group = listView_Filtrar.Groups[ADD.GENERO];
+                                listView_Filtrar.Items.Add(LIST_VIEW_FILTRAR);
 
-                            button_Filtrar.Enabled = true;
+                                button_Filtrar.Enabled = true;
 
+                            }
                         }
                     }
                 }
+                else
+                {
+                    label_Info_Filtro_pes.Text = "SELECIONE UM FILTRO";
+                    label_Info_Filtro_pes.Visible = true;
+                }
             }
-             else
-                MessageBox.Show("Selecione uma opção de Pesquisa e insira um valor a ser Pesquisado", "Atenção", MessageBoxButtons.OK,MessageBoxIcon.Exclamation); 
-                
+            else
+            {
+                label_Info_Filtro_pes.Text = "HISTORICO DE FILMES VAZIO";
+                label_Info_Filtro_pes.Visible = true;
+            }
         }
 
         private void checkBox_Data_CheckedChanged(object sender, EventArgs e)
@@ -277,6 +290,20 @@ namespace Exercicio
             label_Info.Text = "Clique em Editar para salvar as alterações";
         }
 
+        private void listView_roll_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button_Filtrar_MouseLeave(object sender, EventArgs e)
+        {
+            label_info_Filtrar.Visible = false;
+        }
+
+        private void button_Filtrar_MouseHover(object sender, EventArgs e)
+        {
+            label_info_Filtrar.Visible = true;
+        }
     }
 }
 
